@@ -1,0 +1,64 @@
+extends layout
+
+block content
+	header#top
+		div.container_12
+			h1.logo.push_1.grid_3
+			nav#main-nav.grid_5.push_3
+				a.nav-item(href="#about") About
+				a.nav-item(href="#members") Members
+				a.nav-item(href="#projects") Projects
+				a.nav-item(href="#contact") Contact
+
+	div.container_12
+		div.push_1.grid_10#main-container
+			section#about
+				hgroup
+					h2.section-title &nbsp
+				quote.quote What is the key to life?…Wealth?…Happiness?…Success?…Fulfillment? To be honest, we don't know. But, with billions of doors around the planet, your keys are bound to unlock some answers.
+			section#members.clearfix
+				hgroup
+					h2.section-title Members
+					h4.section-subtitle who will give you a key to doors
+				div.members
+					div.member
+						img.member-photo(src="/images/member-kay.jpg")
+						p.member-desc Kay Woo<br />CEO
+					div.member
+						img.member-photo(src="/images/member-jaehwa.jpg")
+						p.member-desc Jaehwa Han<br/>CTO
+					div.member
+						img.member-photo(src="/images/member-jordan.jpg")
+						p.member-desc Jordan J. Jarecki<br />COO
+					div.member
+						img.member-photo(src="/images/member-myunkyu.jpg")
+						p.member-desc Myunkyu Park<br />Lead Engineer
+					div.member
+						img.member-photo(src="/images/member-beomki.jpg")
+						p.member-desc Beomki Lee<br />Engineer
+					div.member
+						img.member-photo(src="/images/member-eunsol.jpg")
+						p.member-desc Eunsol Kim<br />#1 Woman Engineer
+					div.member
+						img.member-photo(src="/images/member-jiseob.jpg")
+						p.member-desc Jiseob Kim<br />Engineer
+					div.member	
+						img.member-photo(src="/images/member-you.jpg")
+						p.member-desc <span style="color:#aaa">Rock star</span>
+			section#projects.clearfix
+				hgroup
+					h2.section-title Projects
+					h4.section-subtitle we don't stop things
+				div.project.grid_7.push_1
+					img.grid_2.alpha(src="/images/project-dnd.jpg")
+					div.info.grid_5.omega
+						h6.title Doors & Dots
+						p.desc There are hundreds of ways to tell your friends what you did yesterday.  There are tens of ways to tell your friends what you’re doing right now.
+						p.desc But, how do you effectively tell your friends what you will do in the future… You can do it with Doors & Dots soon.
+
+			section#contact.clearfix
+				hgroup
+					h2.section-title Contact
+					h4.section-subtitle what are you waiting for?
+				p.contact mail to 
+					<a class="email" href="mailto:info@easi6.com">info@easi6.com</a> or<br />drop by office at<br /><a href="https://maps.google.com/?q=364+Marin+Boulevard,+Jersey+City,+NJ,+United+States" class="address">364 Marin Blvd 2<sup>fl</sup><br />Jersey City, NJ 07302</a>
