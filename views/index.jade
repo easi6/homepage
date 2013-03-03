@@ -1,79 +1,98 @@
 extends layout
 
 block content
-	header#top
-		div.container_12
-			h1.logo.push_1.grid_2
-			nav#main-nav.grid_6.push_3
-				a.nav-item(href="#about") About
-				a.nav-item(href="#projects") Projects
-				a.nav-item(href="#members") Team
-				a.nav-item(href="http://blog.easi6.com") Blog
-				a.nav-item(href="#contact") Contact
+  header#top
+    div.container_12
+      h1.logo.push_1.grid_2
+      nav#main-nav.grid_6.push_3
+        a.nav-item(href="#about") About
+        a.nav-item(href="#projects") Projects
+        a.nav-item(href="#members") Team
+        a.nav-item(href="http://blog.easi6.com") Blog
+        a.nav-item(href="#contact") Contact
 
-	div.container_12
-		div.push_1.grid_10#main-container
-			section#about
-				hgroup
-					h2.section-title &nbsp
-				quote.quote easi6, Inc., is a Korean-American tech startup headquartered in Jersey City, NJ, with a satellite office in Seoul, South Korea. Our team specializes in social-networking, location-based, and social-media mobile services, with a unique focus on pattern recognition and user modeling software. 
+  div.container_12
+    div.prefix_1.grid_10#main-container
+      section#about
+        hgroup
+          h2.section-title &nbsp
+        quote.quote easi6, Inc., is a Korean-American tech startup headquartered in Jersey City, NJ, with a satellite office in Seoul, South Korea. Our team specializes in social-networking, location-based, and social-media mobile services, with a unique focus on pattern recognition and user modeling software. 
 
-			section#projects.clearfix
-				hgroup
-					h2.section-title Projects
-					h4.section-subtitle Our Signature App
-				div.project.grid_7.push_1
-					a(href="http://doorsndots.com",target="_blank")
-						img.grid_2.alpha(src="/images/project-dnd.jpg")
-					div.info.grid_5.omega
-						h6.title
-							a(href="http://doorsndots.com",target="_blank",style="color:#555") Doors & Dots
-						p.desc Doors & Dots is the new, fast, easy way to create, discover, and share near-term meetings, be they professional or social, planned or spontaneous, open to friends or invite only. 
-						p.desc Sync your meetings with your mobile-device calendar, organize and invite entire groups at once, view all meeting details in a single mobile display, and take and share photos with meeting participants.  
-						p.desc We’re changing the way that the world comes together.  #ComeTogether with us.	
+      section#projects.clearfix
+        hgroup
+          h2.section-title Projects
+          h4.section-subtitle Our Signature App
+        div.project.grid_7.prefix_1.suffix_2.alpha.omega
+          a(href="http://doorsndots.com",target="_blank")
+            img.grid_2.alpha(src="/images/project-dnd.jpg")
+          div.info.grid_5.omega
+            h6.title
+              a(href="http://doorsndots.com",target="_blank",style="color:#555") Doors & Dots
+            p.desc Doors & Dots is the new, fast, easy way to create, discover, and share near-term meetings, be they professional or social, planned or spontaneous, open to friends or invite only. 
+            p.desc Sync your meetings with your mobile-device calendar, organize and invite entire groups at once, view all meeting details in a single mobile display, and take and share photos with meeting participants.  
+            p.desc We’re changing the way that the world comes together.  #ComeTogether with us.  
 
 
-			section#members.clearfix
-				hgroup
-					h2.section-title Team
-					h4.section-subtitle The Rockstars
-				div.members
-					div.member
-						img.member-photo(src="/images/member-kay.jpg")
-						p.member-detail Kay Woo<br />Founder & Executive
-						p.member-desc &nbsp
-						p.member-desc Kay assembled the easi6 team from around the world and from a diverse set of academic and professional backgrounds. Kay is easi6’s heart and soul, overseeing product development, managing finances and operations, seeking out new talent and advisers, and moving the company forward day by day.
-					div.member
-						img.member-photo(src="/images/member-jaehwa.jpg")
-						p.member-detail Jaehwa Han<br />Lead Engineer
-						p.member-desc &nbsp
-						p.member-desc Jaehwa leads the easi6 engineering team and the product implementation of Doors & Dots. With a strong background in both web and mobile app development, Jaehwa is the man behind the code, turning complex problems into simple, elegant solutions.
-					div.member
-						img.member-photo(src="/images/member-jordan.jpg")
-						p.member-detail Jordan J. Jarecki<br />Growth Operations
-						p.member-desc &nbsp
-						p.member-desc Applying his experience in direct sales and vendor relations, Jordan executes easi6’s growth strategy. From making new connections to acquiring and retaining loyal users, Jordan crafts and communicates easi6’s mission and values to the startup’s diverse stakeholders.
-					div.member
-						img.member-photo(src="/images/member-myunkyu.jpg")
-						p.member-detail Myunkyu Park<br />iOS Developer
-						p.member-desc &nbsp
-						p.member-desc For Myunkyu, easi6 has one, primary objective: To change lives by changing the way that people come together and share their experiences. Dedicated to building innovative and practical technologies, Myunkyu brings his extensive experience in consumer-facing web and mobile development to the easi6 team.					
-					div.member
-						img.member-photo(src="/images/member-beomki.jpg")
-						p.member-detail Beomki Lee<br />Server side Developer
-						p.member-desc &nbsp
-						p.member-desc A book is easy to read because it was hard to write; an app is no different. Young and visionary, Beomki is the man behind the curtain, applying the latest technologies and techniques to making sure that all the components are in sync and talking to one another. 
-					div.member	
-						img.member-photo(src="/images/member-you.jpg")
-						p.member-detail <span style="color:#aaa">Rock star</span>
-						p.member-desc &nbsp
-						p.member-desc The easi6 family comes from a variety of backgrounds, including engineering, robotics and machine learning, evolutionary studies, mathematics, finance, history, and design.  Join us, and help us build powerful tools that solve real problems.
-			
-						
+      section#members.clearfix
+        hgroup
+          h2.section-title Team
+          h4.section-subtitle The Rockstars
+        div.members
+          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
+            div.grid_2.alpha
+              img.member-photo(src="/images/member-kay.jpg")
+              p.member-name Kay Woo
+              p.member-title Founder & Executive
+            div.grid_5.omega
+              p.member-desc Kay assembled the easi6 team from around the world and from a diverse set of academic and professional backgrounds. Kay is easi6’s heart and soul, overseeing product development, managing finances and operations, seeking out new talent and advisers, and moving the company forward day by day.
+              a.email(href="mailto:kay.woo@easi6.com") kay.woo@easi6.com
 
-			section#contact.clearfix
-				hgroup
-					h2.section-title Contact
-					h4.section-subtitle Say 'Hi'
-				p.contact mail to 
-					<a class="email" href="mailto:info@easi6.com">info@easi6.com</a> or<br />drop by the office at<br /><a href="https://maps.google.com/?q=364+Marin+Boulevard,+Jersey+City,+NJ,+United+States" class="address">364 Marin Blvd 2<sup>fl</sup><br />Jersey City, NJ 07302</a>
+          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
+            div.grid_2.alpha
+              img.member-photo(src="/images/member-jaehwa.jpg")
+              p.member-name Jaehwa Han
+              p.member-title Lead Engineer
+            div.grid_5.omega
+              p.member-desc Jaehwa leads the easi6 engineering team and the product implementation of Doors & Dots. With a strong background in both web and mobile app development, Jaehwa is the man behind the code, turning complex problems into simple, elegant solutions.
+              a.email(href="mailto:drh@easi6.com") drh@easi6.com
+
+          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
+            div.grid_2.alpha
+              img.member-photo(src="/images/member-jordan.jpg")
+              p.member-name Jordan J. Jarecki
+              p.member-title Growth Operations
+            div.grid_5.omega
+              p.member-desc Applying his experience in direct sales and vendor relations, Jordan executes easi6’s growth strategy. From making new connections to acquiring and retaining loyal users, Jordan crafts and communicates easi6’s mission and values to the startup’s diverse stakeholders.
+              a.email(href="mailto:jordan.j@easi6.com") jordan.j@easi6.com
+
+          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
+            div.grid_2.alpha
+              img.member-photo(src="/images/member-myunkyu.jpg")
+              p.member-name Myunkyu Park
+              p.member-title iOS Developer
+            div.grid_5.omega
+              p.member-desc For Myunkyu, easi6 has one, primary objective: To change lives by changing the way that people come together and share their experiences. Dedicated to building innovative and practical technologies, Myunkyu brings his extensive experience in consumer-facing web and mobile development to the easi6 team.         
+              a.email(href="mailto:spica@easi6.com") spica@easi6.com
+
+          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
+            div.grid_2.alpha
+              img.member-photo(src="/images/member-beomki.jpg")
+              p.member-name Beomki Lee
+              p.member-title Server Developer
+            div.grid_5.omega
+              p.member-desc A book is easy to read because it was hard to write; an app is no different. Young and visionary, Beomki is the man behind the curtain, applying the latest technologies and techniques to making sure that all the components are in sync and talking to one another. 
+              a.email(href="mailto:c0untd0wn@easi6.com") c0untd0wn@easi6.com
+
+          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
+            div.grid_2.alpha
+              img.member-photo(src="/images/member-you.jpg")
+              p.member-name <span style="color:#aaa">Rock star</span>
+            div.grid_5.omega
+              p.member-desc The easi6 family comes from a variety of backgrounds, including engineering, robotics and machine learning, evolutionary studies, mathematics, finance, history, and design.  Join us, and help us build powerful tools that solve real problems.
+
+      section#contact.clearfix
+        hgroup
+          h2.section-title Contact
+          h4.section-subtitle Say 'Hi'
+        p.contact mail to 
+          <a class="email" href="mailto:info@easi6.com">info@easi6.com</a> or<br />drop by the office at<br /><a href="https://maps.google.com/?q=364+Marin+Boulevard,+Jersey+City,+NJ,+United+States" class="address">364 Marin Blvd 2<sup>fl</sup><br />Jersey City, NJ 07302</a>

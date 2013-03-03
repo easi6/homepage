@@ -1,14 +1,15 @@
 body
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+	font: 11pt Helvetica, Arial, sans-serif
 	background:url(/images/extra_clean_paper_@2X.png)
+	color : #333
 	padding:0
 	margin:0
 
 ::selection
-	background: #ff9999; /* Safari */
+	background: #ffbe71; /* Safari */
 
 ::-moz-selection
-	background: #ff9999; /* Firefox */
+	background: #ffbe71; /* Firefox */
 
 
 h1.logo
@@ -37,10 +38,8 @@ h1.logo
 	float:left
 	padding-left:20px
 	text-decoration:none
-	color:#333
+	color:#999
 	font-size:12pt
-	font-family: Helvetica Arial sans-serif
-	font-weight:bold
 hgroup
 	margin-right:50px
 	margin-top:15px
@@ -51,7 +50,7 @@ hgroup
 .quote
 	color:#777
 	font-style:italic
-	font-family: Times "Times New Roman" serif
+	font-family: Times, "Times New Roman", serif
 	font-size:15pt
 	width:550px
 	display:block
@@ -70,32 +69,47 @@ section
 	padding-bottom: 25px
 .member-desc
 	text-align:left
-.member-detail
-	text-aligh:center
+	margin-top:25px
+	line-height:140%
+	padding-bottom:10px
+	height:115px
+	a.email
+		font-size:10pt
+		font-weight:normal
+.member-photo
+	display:block
+.member-name
+	text-align:center
+	color:#555
+	font-weight:bold
+.member-title
+	color:#777
+	font-size:10pt
+	text-align:center
 
 .section-subtitle
 	font-size:11pt
 	text-align:right
 	color:#777
-	font-family: Times "Times New Roman" serif
+	font-family: Times, "Times New Roman", serif
 	font-style:italic
 hgroup
 	padding-top:100px
 .contact
 	margin-top:30px
 	font-size:15pt
-	font-family:Times "Times New Roman" serif
+	font-family:Times, "Times New Roman", serif
 	font-style:italic
 	color:#777
 	text-align:center
 	line-height:150%
-	a.email	
-		text-decoration:none
-		font-style:normal
-		font-family:Helvetica Arial sans-serif
+	a.email
 		font-size:12pt
 		font-weight:bold
-		color:#59F
+a.email	
+	text-decoration:none
+	font-style:normal
+	color:#59F
 .address
 	font-size:15pt
 	color:#333
@@ -106,10 +120,10 @@ hgroup
 		vertical-align:super
 		font-size:small
 .members
-	text-align:center
 
 .project
 	p.desc
+		line-height:140%
 		margin-bottom:5px
 	img
 		display:block

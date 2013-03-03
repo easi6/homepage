@@ -1,15 +1,16 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 11pt Helvetica, Arial, sans-serif;
   background: url("/images/extra_clean_paper_@2X.png");
+  color: #333;
   padding: 0;
   margin: 0;
 }
 ::selection {
-  background: #f99;
+  background: #ffbe71;
 /* Safari */
 }
 ::-moz-selection {
-  background: #f99;
+  background: #ffbe71;
 /* Firefox */
 }
 h1.logo {
@@ -40,10 +41,8 @@ h1.logo {
   float: left;
   padding-left: 20px;
   text-decoration: none;
-  color: #333;
+  color: #999;
   font-size: 12pt;
-  font-family: Helvetica Arial sans-serif;
-  font-weight: bold;
 }
 hgroup {
   margin-right: 50px;
@@ -57,7 +56,7 @@ hgroup {
 .quote {
   color: #777;
   font-style: italic;
-  font-family: Times "Times New Roman" serif;
+  font-family: Times, "Times New Roman", serif;
   font-size: 15pt;
   width: 550px;
   display: block;
@@ -71,19 +70,40 @@ section {
   margin-bottom: 30px;
 }
 .member {
-  float: left;
+  float: center;
   display: block;
-  padding: 20px;
+  padding: 40px;
   padding-bottom: 25px;
 }
 .member-desc {
+  text-align: left;
+  margin-top: 25px;
+  line-height: 140%;
+  padding-bottom: 10px;
+  height: 115px;
+}
+.member-desc a.email {
+  font-size: 10pt;
+  font-weight: normal;
+}
+.member-photo {
+  display: block;
+}
+.member-name {
+  text-align: center;
+  color: #555;
+  font-weight: bold;
+}
+.member-title {
+  color: #777;
+  font-size: 10pt;
   text-align: center;
 }
 .section-subtitle {
   font-size: 11pt;
   text-align: right;
   color: #777;
-  font-family: Times "Times New Roman" serif;
+  font-family: Times, "Times New Roman", serif;
   font-style: italic;
 }
 hgroup {
@@ -92,18 +112,19 @@ hgroup {
 .contact {
   margin-top: 30px;
   font-size: 15pt;
-  font-family: Times "Times New Roman" serif;
+  font-family: Times, "Times New Roman", serif;
   font-style: italic;
   color: #777;
   text-align: center;
   line-height: 150%;
 }
 .contact a.email {
-  text-decoration: none;
-  font-style: normal;
-  font-family: Helvetica Arial sans-serif;
   font-size: 12pt;
   font-weight: bold;
+}
+a.email {
+  text-decoration: none;
+  font-style: normal;
   color: #59f;
 }
 .address {
@@ -118,20 +139,22 @@ hgroup {
   vertical-align: super;
   font-size: small;
 }
-.members {
-  text-align: center;
-}
+.members p.desc,
 .project p.desc {
+  line-height: 140%;
   margin-bottom: 5px;
 }
+.members img,
 .project img {
   display: block;
   float: left;
 }
+.members p.info,
 .project p.info {
   display: block;
   float: left;
 }
+.members h6.title,
 .project h6.title {
   font-weight: bold;
   font-size: 12pt;
