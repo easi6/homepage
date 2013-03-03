@@ -47,6 +47,7 @@ h1.logo {
 hgroup {
   margin-right: 50px;
   margin-top: 15px;
+  padding-top: 50px;
 }
 .section-title {
   font-size: 15pt;
@@ -54,14 +55,14 @@ hgroup {
   color: #555;
 }
 .quote {
-  color: #777;
+  color: #999;
   font-style: italic;
   font-family: Times, "Times New Roman", serif;
-  font-size: 15pt;
+  font-size: 20pt;
   width: 550px;
   display: block;
   margin: 0 auto;
-  background: url("/images/open-quote.gif") no-repeat;
+  background: url("/images/open-quote.gif") left top no-repeat, url("/images/close-quote.gif") 91% bottom no-repeat;
   padding-top: 30px;
   padding-left: 45px;
   margin-top: 100px;
@@ -72,8 +73,7 @@ section {
 .member {
   float: center;
   display: block;
-  padding: 40px;
-  padding-bottom: 25px;
+  padding-bottom: 60px;
 }
 .member-desc {
   text-align: left;
@@ -105,9 +105,7 @@ section {
   color: #777;
   font-family: Times, "Times New Roman", serif;
   font-style: italic;
-}
-hgroup {
-  padding-top: 100px;
+  margin-bottom: 40px;
 }
 .contact {
   margin-top: 30px;
@@ -160,5 +158,14 @@ a.email {
   font-size: 12pt;
   color: #555;
   margin-top: 7px;
+  margin-bottom: 10px;
+}
+#intro {
+  margin-left: 50px;
+  line-height: 150%;
+  margin-top: 40px;
+  padding-bottom: 100px;
+}
+#intro p {
   margin-bottom: 10px;
 }
