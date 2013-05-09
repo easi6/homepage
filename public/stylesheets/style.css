@@ -137,10 +137,14 @@ a.email {
   vertical-align: super;
   font-size: small;
 }
+.members,
+.project {
+  margin-bottom: 25px;
+}
 .members p.desc,
 .project p.desc {
   line-height: 140%;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .members img,
 .project img {
