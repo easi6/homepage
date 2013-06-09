@@ -1,7 +1,8 @@
 body
-  font: 11pt Helvetica, Arial, sans-serif
-  background:url(/images/extra_clean_paper_@2X.png)
-  color : #333
+  font-family: 'Open sans', sans-serif
+  font-size: 14px
+  //background:url(/images/extra_clean_paper_@2X.png)
+  color : #33333
   padding:0
   margin:0
 
@@ -11,100 +12,201 @@ body
 ::-moz-selection
   background: #ffbe71; /* Firefox */
 
+#nav.background_green
+  background-color: #80AF82
 
-h1.logo
-  background: url(/images/logo2.png) no-repeat
-  height: 100px
-  width: 184px
-  text-indent:-99999px
+#nav.background_red
+  background-color: #E44324
+
+#nav.background_orange
+  background-color: #FF9700
+
+#nav.background_gray
+  background-color: #6E6E6E
+
+#nav
+  z-index: 999
+  position:fixed
+  border-radius: 65px
+  width:130px
+  height:130px
+  top:50%
+  left: 70%
+  h1
+    margin-top:30px
+    a.logo
+      display:block
+      background: url(/images/logo2.png) no-repeat
+      height: 54px
+      width: 100px
+      text-indent:-99999px
+      margin:auto
+  nav
+    display:none
+
+#nav:hover
+  z-index: 999
+  position:fixed
+  border-radius: 100px
+  width:200px
+  height:200px
+  a.logo
+    display:block
+    background: url(/images/logo2.png) no-repeat
+    height: 54px
+    width: 100px 
+    text-indent:-99999px
+    margin-top: 10px
+    margin:auto
+  nav
+    margin-top:40px
+    margin-left:2px
+    display:block
+    ol
+      width: 200px
+      li.none
+        display: none
+      li.left
+        margin-right:15px
+        a
+          text-align: right
+      li.right
+        a
+          text-align:left
+      li
+        margin-bottom: 20px
+        width: 90px
+        float:left
+        a
+          width: 90px
+        a.nav-item
+          float:left
+          font-size: 15px
+          color: rgba(0,0,0, 0.4)
+          text-decoration: none
+        a.nav-item:visited
+          font-size: 15px
+          color: rgba(0,0,0, 0.4)
+          text-decoration: none
+        a.nav-item:hover
+          font-size: 15px
+          color: rgba(255,255,255, 0.4)
+          text-decoration: none
+      li.active
+        a.nav-item
+          color: rgba(255,255,255, 1.0)
 
 #main-container
+  padding: 0
+  margin-top:0
   background:white
-  box-shadow: 0 0 10px #888
+  //box-shadow: 0 0 10px #888
   margin-bottom:30px
-  border-radius:10px
+  //border-radius:10px
+  width:950px
+  margin:auto
 
-#main-nav
-  background:white
-  margin-top:60px
-#top
-  background:url(/images/header-bg.png) repeat-x
-  height:110px
-  z-index:10
-  position:fixed
-  width:100%
-.nav-item
-  display:block
-  float:left
-  padding-left:20px
-  text-decoration:none
-  color:#999
-  font-size:12pt
-hgroup
-  margin-right:50px
-  margin-top:15px
-  padding-top: 50px
-.section-title
-  font-size:15pt
-  text-align:right
-  color:#555
-.quote
-  color:#999
-  font-style:italic
-  font-family: Times, "Times New Roman", serif
-  font-size:20pt
-  width:550px
-  display:block
-  margin:0 auto
-  background: url(/images/open-quote.gif) left top no-repeat, url(/images/close-quote.gif) 91% bottom no-repeat
-  padding-top:30px
-  padding-left:45px
-  margin-top:100px
+#about_header_carousel
+  display: block
+  div.carousel-inner
+    height: 410px
+    p.header_title
+      padding-top: 110px
+  ol
+    right: 0
+    position: relative
+    margin: 0
+    padding: 0
+    height: 60px
+    li.active
+      background-color: #ff0000
+    li
+      background-color: #eee
+
+.text-600
+  font-family: 'Open sans', sans-serif
+  font-weight: 600
+
+.text-400-italic
+  font-style: italic
+  font-weight: 400
+
+.header_title
+  font-family: 'Open sans', sans-serif
+  font-weight: 600
+  font-size: 65px
+  line-height: 117%
 
 section
-  margin-bottom: 30px
-.member
-  float:center
-  display:block
-  padding-bottom: 60px
-.member-desc
-  text-align:left
-  margin-top:25px
-  line-height:140%
-  padding-bottom:10px
-  height:115px
-  a.email
-    font-size:10pt
-    font-weight:normal
-.member-photo
-  display:block
-.member-name
-  text-align:center
-  color:#555
-  font-weight:bold
-.member-title
-  color:#777
-  font-size:10pt
-  text-align:center
+  padding-top:100px
 
-.section-subtitle
-  font-size:11pt
-  text-align:right
-  color:#777
-  font-family: Times, "Times New Roman", serif
-  font-style:italic
-  margin-bottom:40px
-.contact
-  margin-top:30px
-  font-size:15pt
-  font-family:Times, "Times New Roman", serif
-  font-style:italic
-  color:#777
-  text-align:center
-  line-height:150%
-  a.email
-    font-size:12pt
-    font-weight:bold
+#intro
+  p
+    height:90px
+    margin-bottom:10px
+    line-height: 171%
+  .about_desc_left
+    float:left
+    width:430px
+  .about_desc_right
+    width: 510px
+    margin-left: 440px
+
+#projects
+  .project_img
+    width: 470px
+    height: 470px
+    margin-bottom: 15px
+    background-color: #eee
+  #project_dnd
+    float:left
+    width: 470px;
+  #project_lb
+    width:470px
+    margin-left: 480px
+  p
+    line-height: 171%
+
+#members
+  .members
+    width:950px
+    .member
+      float:left
+      display:block
+      width:230px
+      margin-right: 10px
+      margin-bottom: 40px
+      img
+        width:230px
+        height:230px
+        margin-bottom: 10px
+      p
+        margin-bottom: 10px
+      .member-name
+        font-size: 16px
+        font-weight: 700
+        line-height: 140%
+      .member-title .email
+        font-size: 12px
+        font-weight: 600
+        line-height: 158%
+    .no-margin-right
+      margin-right: 0px
+
+#contact
+  margin-bottom: 500px
+  #map_canvas
+    width:950px
+    height:410px
+    display:block
+    margin-bottom:30px
+  .contact
+    a
+      color: #333333
+      font-size: 14px
+      line-height: 171%
+
+
 a.email 
   text-decoration:none
   font-style:normal
@@ -118,30 +220,3 @@ a.email
   sup
     vertical-align:super
     font-size:small
-.members
-
-.project
-  margin-bottom:25px
-  p.desc
-    line-height:140%
-    margin-bottom:15px
-  img
-    display:block
-    float:left
-  p.info
-    display:block
-    float:left
-  h6.title
-    font-weight:bold
-    font-size:12pt
-    color:#555
-    margin-top:7px
-    margin-bottom:10px
-
-#intro
-  margin-left:50px
-  line-height:150%
-  margin-top:40px
-  padding-bottom:100px
-  p
-    margin-bottom:10px

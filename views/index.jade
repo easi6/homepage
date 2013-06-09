@@ -1,122 +1,90 @@
 extends layout
 
 block content
-  header#top
-    div.container_12
-      h1.logo.push_1.grid_2
-      nav#main-nav.grid_6.push_3
-        a.nav-item(href="#about") About
-        a.nav-item(href="#projects") Projects
-        a.nav-item(href="#members") Team
-        a.nav-item(href="http://blog.easi6.com") Blog
-        a.nav-item(href="#contact") Contact
 
-  div.container_12
-    div.prefix_1.grid_10#main-container
-      section#about
-        hgroup
-          h2.section-title &nbsp
-        quote.quote Solve common problems with uncommon technologies.
-        div#intro.grid_6.prefix_1.suffix_2.alpha.omega 
-          p easi6, Inc., is a Korean-American tech startup headquartered in Jersey City, NJ, with a satellite office in Seoul, South Korea. 
-          p Our team specializes in social-networking, location-based, and social-media mobile services, with a unique focus on pattern recognition and user modeling software. 
+  div#nav.background_red
+    h1
+      a.logo(href="#about")
+    nav#main-nav.navbar
+      ol.nav
+        li.none
+          a.nav-item(href="#about") about
+        li.left
+          a.nav-item(href="#projects") projects
+        li.right
+          a.nav-item(href="#contact") contact
+        li.left
+          a.nav-item(href="http://blog.easi6.com") blog
+        li.right
+          a.nav-item(href="#members") team
 
-      section#projects.clearfix
-        hgroup
-          h2.section-title Projects
-          h4.section-subtitle Changing the world
-        div.project.grid_7.prefix_1.suffix_2.alpha.omega
+  div#main-container
+    section#about
+      div#about_header_carousel.carousel.slide
+        div.carousel-inner
+          div.active.item
+            p.header_title Solve common problems<br />with uncommon technologies.
+          div.item
+            img(src="/images/dnd_carousel.png", style="width:950px; height:398px;")
+        ol.carousel-indicators
+          li(data-target="#about_header_carousel", data-slide-to="0", class="active")
+          li(data-target="#about_header_carousel", data-slide-to="1")
+      div#intro
+        p.about_desc_left <span class="text-600">easi6, Inc.,</span> is a Korean-American tech startup<br /> headquartered in Jersey City, NJ, with a satellite office in<br /> Seoul, South Korea. 
+        p.about_desc_right Our team specializes in <span class="text-400-italic">social-networking, location-based, and social-<br />media mobile services,</span> with a unique focus on pattern recognition and user<br /> modeling software. 
+
+    section#projects.clearfix
+      div#project_dnd
+        div.project_img
           a(href="http://doorsndots.com",target="_blank")
-            img.grid_2.alpha(src="/images/project-dnd.jpg")
-          div.info.grid_5.omega
-            h6.title
-              a(href="http://doorsndots.com",target="_blank",style="color:#555;text-decoration:none") Doors & Dots
-            p.desc Create, share, and discover near-term meetings.
-            p.desc Share meeting details in a single, organized display.
-            p.desc Snap and share photos, and comment on meetings.
-            p.desc Socialize around locations, share your travel, and chat with friends on the real-time meeting map.
-        div.project.grid_7.prefix_1.suffix_2.alpha.omega
+            img.grid_2.alpha(src="/images/dnd_logo.png")
+        div.project_desc
+          p.desc Doors & Dots Create, share, and discover near-term meetings. Share meeting details in a single, organized display. Snap and share photos, and comment on meetings. Socialize around locations, share your travel, and chat with friends on the real-time meeting map.
+      div#project_lb
+        div.project_img
           a(href="http://limeb.us",target="_blank")
-            img.grid_2.alpha(src="/images/project-limebus.png", style="margin-top:30px;")
-          div.info.grid_5.omega
-            h6.title
-              a(href="http://limeb.us",target="_blank",style="color:#555;text-decoration:none") Limebus
-            p.desc Blackberry, Raspberry Pi, Jelly Bean OS...<br />Limebus, minus the sour.
-            p.desc Favorite a bus stop, & see route-specific info. 
-            p.desc Watch on the map as the bus makes its way.
-            p.desc Get a push notification if the bus gets too full.
-            p.desc Let us learn you, & we'll customize your Discover view with the schedules you use.
+            img.grid_2.alpha(src="/images/limebus_logo.png", style="width:470px; height:470px;")
+        div.project_desc
+          p.desc Blackberry, Raspberry Pi, Jelly Bean OS...<br />Limebus, minus the sour. Favorite a bus stop, & see route-specific info. Watch on the map as the bus makes its way. Get a push notification if the bus gets too full. Let us learn you, & we'll customize your Discover view with the schedules you use.
 
-      section#members.clearfix
-        hgroup
-          h2.section-title Team
-          h4.section-subtitle The Rockstars
-        div.members
-          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
-            div.grid_2.alpha
-              img.member-photo(src="/images/member-kay.jpg")
-              p.member-name Kay Woo
-              p.member-title Founder & Executive
-            div.grid_5.omega
-              p.member-desc Kay assembled the easi6 team from around the world and from a diverse set of academic and professional backgrounds. Kay is easi6’s heart and soul, overseeing product development, managing finances and operations, seeking out new talent and advisers, and moving the company forward day by day.
-              a.email(href="mailto:kay.woo@easi6.com") kay.woo@easi6.com
+    section#members.clearfix
+      div.members
+        div.member
+          img.member-photo(src="/images/member-kay.jpg")
+          p.member-name Kay Woo
+          p.member-title Founder & Executive
+          a.email(href="mailto:kay.woo@easi6.com") kay.woo@easi6.com
 
-          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
-            div.grid_2.alpha
-              img.member-photo(src="/images/member-jaehwa.jpg")
-              p.member-name Jaehwa Han
-              p.member-title Lead Engineer
-            div.grid_5.omega
-              p.member-desc Jaehwa leads the easi6 engineering team and the product implementation of Doors & Dots. With a strong background in both web and mobile app development, Jaehwa is the man behind the code, turning complex problems into simple, elegant solutions.
-              a.email(href="mailto:drh@easi6.com") drh@easi6.com
+        div.member
+          img.member-photo(src="/images/member-jaehwa.jpg")
+          p.member-name Jaehwa Han
+          p.member-title Lead Engineer
+          a.email(href="mailto:drh@easi6.com") drh@easi6.com
 
-          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
-            div.grid_2.alpha
-              img.member-photo(src="/images/member-jordan.jpg")
-              p.member-name Jordan J. Jarecki
-              p.member-title Growth Operations
-            div.grid_5.omega
-              p.member-desc Applying his experience in direct sales and vendor relations, Jordan executes easi6’s growth strategy. From making new connections to acquiring and retaining loyal users, Jordan crafts and communicates easi6’s mission and values to the startup’s diverse stakeholders.
-              a.email(href="mailto:jordan.j@easi6.com") jordan.j@easi6.com
+        div.member
+          img.member-photo(src="/images/member-jordan.jpg")
+          p.member-name Jordan J. Jarecki
+          p.member-title Growth Operations
+          a.email(href="mailto:jordan.j@easi6.com") jordan.j@easi6.com
 
-          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
-            div.grid_2.alpha
-              img.member-photo(src="/images/member-myunkyu.jpg")
-              p.member-name James M. Park
-              p.member-title iOS Developer
-            div.grid_5.omega
-              p.member-desc For James, easi6 has one, primary objective: To change lives by changing the way that people come together and share their experiences. Dedicated to building innovative and practical technologies, James brings his extensive experience in consumer-facing web and mobile development to the easi6 team.         
-              a.email(href="mailto:spica@easi6.com") spica@easi6.com
+        div.member.no-margin-right
+          img.member-photo(src="/images/member-myunkyu.jpg")
+          p.member-name James M. Park
+          p.member-title iOS Developer
+          a.email(href="mailto:spica@easi6.com") spica@easi6.com
 
-          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
-            div.grid_2.alpha
-              img.member-photo(src="/images/member-eunsol.jpg")
-              p.member-name Eunsol Kim
-              p.member-title Machine Learning Engineer
-            div.grid_5.omega
-              p.member-desc  A competitive feature of Doors & Dots is that it can learn & model user preferences.  Eunsol comes to the easi6  machine-learning team with a strong background in AI systems, robotics and user modeling, helping easi6 to develop and implement Doors & Dots signature features.
-              a.email(href="mailto:ssol@easi6.com") ssol@easi6.com
+        div.member
+          img.member-photo(src="/images/member-eunsol.jpg")
+          p.member-name Eunsol Kim
+          p.member-title Machine Learning Engineer
+          a.email(href="mailto:ssol@easi6.com") ssol@easi6.com
 
-          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix
-            div.grid_2.alpha
-              img.member-photo(src="/images/member-jiseob.jpg")
-              p.member-name Jiseob Kim
-              p.member-title Machine Learning Engineer
-            div.grid_5.omega
-              p.member-desc Jiseob brings his experience in the development of Android OS mobile apps and user-modeling modules to the easi6 machine-learning team, allowing the team to meet the demands of the growing Android market and better implement pattern-recognition capabilities.
-              a.email(href="mailto:nzer0@easi6.com") nzer0@easi6.com
+        div.member
+          img.member-photo(src="/images/member-jiseob.jpg")
+          p.member-name Jiseob Kim
+          p.member-title Machine Learning Engineer
+          a.email(href="mailto:nzer0@easi6.com") nzer0@easi6.com
 
-
-          div.member.grid_7.prefix_1.suffix_2.alpha.omega.clearfix(style="padding-bottom:20px")
-            div.grid_2.alpha
-              img.member-photo(src="/images/member-you.jpg")
-              p.member-name <span style="color:#aaa">Rock star</span>
-            div.grid_5.omega
-              p.member-desc The easi6 family comes from a variety of backgrounds, including engineering, robotics and machine learning, evolutionary studies, mathematics, finance, history, and design.  Join us, and help us build powerful tools that solve real problems.
-
-      section#contact.clearfix
-        hgroup
-          h2.section-title Contact
-          h4.section-subtitle Say 'Hi'
-        p.contact mail to 
-          <a class="email" href="mailto:info@easi6.com">info@easi6.com</a> or<br />drop by the office at<br /><a href="https://maps.google.com/?q=364+Marin+Boulevard,+Jersey+City,+NJ,+United+States" class="address">364 Marin Blvd 2<sup>fl</sup><br />Jersey City, NJ 07302</a>
+    section#contact.clearfix
+      div#map_canvas maps here
+      p.contact <a class="email" href="mailto:info@easi6.com">info@easi6.com</a> <br /><a href="https://maps.google.com/?q=364+Marin+Boulevard,+Jersey+City,+NJ,+United+States" class="address">364 Marin Blvd 2<sup>fl</sup><br />Jersey City, NJ 07302</a>
