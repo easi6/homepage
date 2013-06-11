@@ -14,16 +14,32 @@ body {
 /* Firefox */
 }
 #nav.background_green {
+  background: url("/images/green_circle_regular_130x130.png") no-repeat;
   background-color: #80af82;
 }
+#nav.background_green:hover {
+  background: url("/images/green_circle_navigation_200x200.png") no-repeat;
+}
 #nav.background_red {
+  background: url("/images/red_circle_regular_130x130.png") no-repeat;
   background-color: #e44324;
 }
+#nav.background_red:hover {
+  background: url("/images/red_circle_navigation_200x200.png") no-repeat;
+}
 #nav.background_orange {
+  background: url("/images/yellow_circle_regular_130x130.png") no-repeat;
   background-color: #ff9700;
 }
+#nav.background_orange:hover {
+  background: url("/images/yellow_circle_navigation_200x200.png") no-repeat;
+}
 #nav.background_gray {
+  background: url("/images/gray_circle_regular_130x130.png") no-repeat;
   background-color: #6e6e6e;
+}
+#nav.background_gray:hover {
+  background: url("/images/gray_circle_navigation_200x200.png") no-repeat;
 }
 #nav {
   z-index: 999;
@@ -39,9 +55,9 @@ body {
 }
 #nav h1 a.logo {
   display: block;
-  background: url("/images/logo2.png") no-repeat;
-  height: 54px;
-  width: 100px;
+  background: url("/images/logo_web85x53.png") no-repeat;
+  height: 53px;
+  width: 85px;
   text-indent: -99999px;
   margin: auto;
 }
@@ -57,9 +73,9 @@ body {
 }
 #nav:hover a.logo {
   display: block;
-  background: url("/images/logo2.png") no-repeat;
-  height: 54px;
-  width: 100px;
+  background: url("/images/logo_web85x53.png") no-repeat;
+  height: 53px;
+  width: 85px;
   text-indent: -99999px;
   margin-top: 10px;
   margin: auto;
@@ -190,6 +206,18 @@ section {
 }
 #members .members {
   width: 950px;
+}
+#members .members div.member .member-photo {
+  display: block;
+}
+#members .members div.member .member-photo-hover {
+  display: none;
+}
+#members .members div.member:hover .member-photo {
+  display: none;
+}
+#members .members div.member:hover .member-photo-hover {
+  display: block;
 }
 #members .members .member {
   float: left;
