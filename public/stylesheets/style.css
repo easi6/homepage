@@ -55,7 +55,7 @@ body {
 }
 #nav h1 a.logo {
   display: block;
-  background: url("/images/logo_web85x53.png") no-repeat;
+  background: url("/images/logo_icon.png") no-repeat;
   height: 53px;
   width: 85px;
   text-indent: -99999px;
@@ -73,7 +73,7 @@ body {
 }
 #nav:hover a.logo {
   display: block;
-  background: url("/images/logo_web85x53.png") no-repeat;
+  background: url("/images/logo_icon.png") no-repeat;
   height: 53px;
   width: 85px;
   text-indent: -99999px;
