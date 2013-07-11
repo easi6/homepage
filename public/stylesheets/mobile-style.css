@@ -161,7 +161,7 @@ section {
 #intro p {
   min-height: 90px;
   height: 20%;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   line-height: 171%;
   font-size: 1em;
 }
@@ -189,13 +189,11 @@ section {
 #projects #project_dnd {
   float: left;
   width: 90%;
-  max-width: 480px;
   margin: auto;
 }
 #projects #project_lb {
   width: 90%;
-  max-width: 480px;
-  margin-left: 485px;
+  margin-left: 100%;
   padding-right: 5%;
 }
 #projects p {
