@@ -12,11 +12,11 @@ block content
         li.left
           a.nav-item(href="#projects") projects
         li.right
-          a.nav-item(href="#contact") contact
+          a.nav-item(href="#members") team
         li.left
           a.nav-item(href="http://blog.easi6.com") blog
         li.right
-          a.nav-item(href="#members") team
+          a.nav-item(href="#contact") contact
 
   div#main-container
     section#about
@@ -25,13 +25,13 @@ block content
           div.active.item
             p.header_title Solve common problems<br />with uncommon technologies.
           div.item
-            img(src="/images/dnd_carousel.jpg", style="width:950px; height:410px;")
+            img(src="/images/dnd_carousel.jpg", style="")
         ol.carousel-indicators
           li(data-target="#about_header_carousel", data-slide-to="0", class="active")
           li(data-target="#about_header_carousel", data-slide-to="1")
       div#intro
-        p.about_desc_left <span class="text-600">easi6, Inc.,</span> is a Korean-American tech startup<br /> headquartered in Jersey City, NJ, with a satellite office in<br /> Seoul, South Korea. 
-        p.about_desc_right Our team specializes in <span class="text-400-italic">social-networking, location-based, and social-<br />media mobile services,</span> with a unique focus on pattern recognition and user<br /> modeling software. 
+        p.about_desc_left <span class="text-600">easi6, Inc.,</span> is a Korean-American tech startup headquartered in Jersey City, NJ, with a satellite office in Seoul, South Korea. 
+        p.about_desc_right Our team specializes in <span class="text-400-italic">social-networking, location-based, and social-media mobile services,</span> with a unique focus on pattern recognition and user modeling software. 
 
     section#projects.clearfix
       div#project_dnd
@@ -48,7 +48,7 @@ block content
           p.desc Blackberry, Raspberry Pi, Jelly Bean OS...<br />Limebus, minus the sour. Favorite a bus stop, & see route-specific info. Watch on the map as the bus makes its way. Get a push notification if the bus gets too full. Let us learn you, & we'll customize your Discover view with the schedules you use.
 
     section#members.clearfix
-      div.members
+      div.members.hidden-mobile
         div.member
           img.member-photo(src="/images/members/kay_1.jpg")
           img.member-photo-hover(src="/images/members/kay_2.jpg")
@@ -97,6 +97,57 @@ block content
           p.member-name Derek Nguyen
           p.member-title UI design Intern
           a.email(href="mailto:derek@doorsndots.com") derek@doorsndots.com
+
+      div.members.visible-mobile
+        div#members_carousel.carousel.slide
+          div.carousel-inner
+            div.active.item
+              img.member-photo(src="/images/members/kay_1.jpg")
+              img.member-photo-hover(src="/images/members/kay_2.jpg")
+              p.member-name Kay Woo
+              p.member-title Founder & Executive
+              a.email(href="mailto:kay.woo@easi6.com") kay.woo@easi6.com
+            div.item
+              img.member-photo(src="/images/members/jaehwa_1.jpg")
+              img.member-photo-hover(src="/images/members/jaehwa_2.jpg")
+              p.member-name Jaehwa Han
+              p.member-title Lead Engineer
+              a.email(href="mailto:drh@easi6.com") drh@easi6.com
+            div.item
+              img.member-photo(src="/images/members/jordan_1.jpg")
+              img.member-photo-hover(src="/images/members/jordan_2.jpg")
+              p.member-name Jordan J. Jarecki
+              p.member-title Growth Operations
+              a.email(href="mailto:jordan.j@easi6.com") jordan.j@easi6.com
+            div.item
+              img.member-photo(src="/images/member-myunkyu.jpg")
+              img.member-photo-hover(src="/images/member-myunkyu.jpg")
+              p.member-name James M. Park
+              p.member-title iOS Developer
+              a.email(href="mailto:spica@easi6.com") spica@easi6.com
+            div.item
+              img.member-photo(src="/images/members/eunsol_1.jpg")
+              img.member-photo-hover(src="/images/members/eunsol_2.jpg")
+              p.member-name Eunsol Kim
+              p.member-title Machine Learning Engineer
+              a.email(href="mailto:ssol@easi6.com") ssol@easi6.com
+            div.item
+              img.member-photo(src="/images/members/jiseob_1.jpg")
+              img.member-photo-hover(src="/images/members/jiseob_2.jpg")
+              p.member-name Jiseob Kim
+              p.member-title Machine Learning Engineer
+              a.email(href="mailto:nzer0@easi6.com") nzer0@easi6.com
+            div.item
+              img.member-photo(src="/images/members/derek_1.jpg")
+              img.member-photo-hover(src="/images/members/derek_2.jpg")
+              p.member-name Derek Nguyen
+              p.member-title UI design Intern
+              a.email(href="mailto:derek@doorsndots.com") derek@doorsndots.com
+          a.left.carousel-control(href="#members_carousel", data-slide="prev")
+            ‹
+          a.right.carousel-control(href="#members_carousel", data-slide="next")
+            ›
+        
 
     section#contact.clearfix
       div#map_canvas maps here

@@ -1,0 +1,260 @@
+body
+  font-family: 'Open sans', sans-serif
+  font-size: 18px
+  //background:url(/images/extra_clean_paper_@2X.png)
+  color : #33333
+  padding:0
+  margin:0
+
+::selection
+  background: #ffbe71; /* Safari */
+
+::-moz-selection
+  background: #ffbe71; /* Firefox */
+
+#nav.background_green
+  background-color: #80AF82
+
+#nav.background_red
+  background-color: #E44324
+
+#nav.background_orange
+  background-color: #FF9700
+
+#nav.background_gray
+  background-color: #6E6E6E
+
+#nav
+  z-index: 999
+  position:fixed
+  width:100%
+  height:120px
+  top:0
+  left:0
+  h1
+    border-bottom: 1px solid #333333
+    margin-top:5px
+    padding-bottom: 5px
+    a.logo
+      display:block
+      background: url(/images/logo_icon.png) no-repeat
+      height: 53px
+      width: 85px
+      text-indent:-99999px
+      margin:auto
+  nav
+    margin-top:15px
+    margin-left:2px
+    display:block
+    width: 100%
+    height: 50px
+    border-radius: 0px
+    ol
+      width: 100%
+      font-size: 1.2em
+      li.none
+        display: none
+      li
+        margin-bottom: 20px
+        width: 25%
+        float:left
+        display:block
+        a
+          width: 100%
+          font-size: 1.2em
+          text-align: center
+        a.nav-item
+          float:left
+          color: rgba(0,0,0, 0.4)
+          text-decoration: none
+          margin:auto
+        a.nav-item:visited
+          color: rgba(0,0,0, 0.4)
+          text-decoration: none
+        a.nav-item:hover
+          color: rgba(255,255,255, 0.4)
+          text-decoration: none
+      li.active
+        a.nav-item
+          color: rgba(255,255,255, 1.0)
+          
+#main-container
+  padding: 0
+  margin-top:120px
+  background:white
+  //box-shadow: 0 0 10px #888
+  margin-bottom:0px
+  //border-radius:10px
+  width:100%
+  margin:auto
+
+.text-600
+  font-family: 'Open sans', sans-serif
+  font-weight: 600
+
+.text-400-italic
+  font-style: italic
+  font-weight: 400
+
+.header_title
+  font-family: 'Open sans', sans-serif
+  font-weight: 600
+  font-size: 35px
+  line-height: 117%
+
+section
+  padding-top:120px
+  margin-top: 50px
+  heigth: 100%
+  display: block
+  clear: both
+  padding-bottom: 20%
+
+#about_header_carousel
+  width: 90%
+  display: block
+  margin:auto
+  div.carousel-inner
+    min-height: 310px
+    p.header_title
+      display:block
+      width: 100%
+      height: 100%
+      padding-top: 90px
+    img
+      max-height: 310px
+  ol
+    clear:right
+    right: 0
+    position: relative
+    margin: 0
+    padding: 0
+    height: 40px
+    li.active
+      background-color: #ff0000
+    li
+      background-color: #eee
+  a
+    text-decoration: none
+    font-family: Helvetica, Arial,sans-serif;
+
+#intro
+  clear:both
+  height: 100%
+  p
+    min-height:90px
+    height: 20%
+    padding-bottom: 40px
+    line-height: 171%
+    font-size: 1em
+  .about_desc_left
+    float:none
+    width: 85%
+    margin:auto
+  .about_desc_right
+    width: 85%
+    margin: auto
+
+#projects
+  width: 100%
+  height: 100%
+  overflow: scroll
+  .project_img
+    max-width: 470px
+    width: 90%
+    margin-bottom: 15px
+    background-color: #eee
+    margin: auto
+  #project_dnd
+    float:left
+    width: 90%
+    max-width: 480px
+    margin:auto
+  #project_lb
+    width: 90%
+    max-width: 480px
+    margin-left: 485px
+    padding-right: 5%
+  p
+    line-height: 171%
+    max-width: 470px
+    width: 90%
+    margin: auto
+    margin-top: 10px
+
+#members
+  .members.hidden-mobile
+    display:none
+  #members_carousel
+    width: 90%
+    display: block
+    margin:auto
+    div.carousel-inner
+      min-height: 230px
+      height: 90%
+      div.item
+        width: 100%
+        .member-photo
+          display:block
+        .member-photo-hover
+          display:none
+        img
+          min-width:230px
+          width: 100%
+          margin-bottom: 10px
+        p
+          margin-bottom: 10px
+        .member-name
+          font-size: 1.2em
+          font-weight: 700
+          line-height: 140%
+        .member-title .email
+          font-size: 0.9em
+          font-weight: 600
+          line-height: 158%
+      div.item:hover
+        .member-photo
+          display:none
+        .member-photo-hover
+          display:block
+    a.carousel-control
+      text-decoration: none
+      font-family: Helvetica, Arial,sans-serif;
+      width: 100px
+      height: 100px
+      border-radius: 50px
+      line-height: 80px
+      font-size: 120px
+
+#contact
+  height: 100%
+  margin-top: 10px
+  #map_canvas
+    width: 90%
+    min-height: 550px
+    height:90%
+    display:block
+    margin: auto
+    margin-bottom:30px
+  .contact
+    width: 90%
+    margin: auto
+    margin-bottom: 250px
+    a
+      color: #333333
+      font-size: 14px
+      line-height: 171%
+
+a.email 
+  text-decoration:none
+  font-style:normal
+  color:#59F
+.address
+  font-size: 0.9em
+  color:#333
+  text-decoration:none
+  &:hover
+    text-decoration:underline
+  sup
+    vertical-align:super
+    font-size:small

@@ -140,6 +140,7 @@ body {
 }
 #about_header_carousel div.carousel-inner {
   height: 410px;
+  width: 950px;
 }
 #about_header_carousel div.carousel-inner p.header_title {
   padding-top: 110px;
@@ -181,11 +182,11 @@ section {
 }
 #intro .about_desc_left {
   float: left;
-  width: 430px;
+  width: 370px;
 }
 #intro .about_desc_right {
-  width: 510px;
-  margin-left: 440px;
+  width: 470px;
+  margin-left: 490px;
 }
 #projects .project_img {
   width: 470px;
@@ -203,6 +204,9 @@ section {
 }
 #projects p {
   line-height: 171%;
+}
+#members .members.visible-mobile {
+  display: none;
 }
 #members .members {
   width: 950px;
