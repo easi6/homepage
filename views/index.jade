@@ -7,23 +7,23 @@ block content
       a.logo(href="#about")
     nav#main-nav.navbar
       ol.nav
-        li.none
-          a.nav-item(href="#about") about
+        //li.none
+        //  a.nav-item(href="#about") about
         li.left
           a.nav-item(href="#projects") projects
         li.right
-          a.nav-item(href="#members") team
+          a.nav-item(href="#contact") contact
         li.left
           a.nav-item(href="http://blog.easi6.com") blog
         li.right
-          a.nav-item(href="#contact") contact
+          a.nav-item(href="#members") team
 
   div#main-container
     section#about
       div#about_header_carousel.carousel.slide
         div.carousel-inner
-          div.active.item
-            p.header_title Solve common problems<br />with uncommon technologies.
+          div.item.active
+            img(src="/images/slide1.png", style="")
           div.item
             img(src="/images/dnd_carousel.jpg", style="")
         ol.carousel-indicators
@@ -38,18 +38,23 @@ block content
         p.about_desc_right Our team specializes in <span class="text-400-italic">social-networking, location-based, and social-media mobile services,</span> with a unique focus on pattern recognition and user modeling software. 
 
     section#projects.clearfix
-      div#project_dnd
+      div#project_tomoni.project
         div.project_img
-          a(href="http://doorsndots.com",target="_blank")
-            img.grid_2.alpha(src="/images/dnd_logo.jpg")
+            img(src="/images/product_1.png")
         div.project_desc
-          p.desc Doors & Dots Create, share, and discover near-term meetings. Share meeting details in a single, organized display. Snap and share photos, and comment on meetings. Socialize around locations, share your travel, and chat with friends on the real-time meeting map.
-      div#project_lb
+          img(src="/images/product_1_mouseover.png")
+          p.title.text-600 Tomoni means together <br />- at the same time.
+          p.desc We're building a network around activities, not social media profiles. Go together. Go with Tomoni.
+          a(href="http://tomoniapp.com",target="_blank") go to page
+      div#seperate_line
+      div#project_dnd.project
         div.project_img
-          a(href="http://limeb.us",target="_blank")
-            img.grid_2.alpha(src="/images/limebus_logo.jpg", style="width:470px; height:470px;")
+            img(src="/images/product_2.png")
         div.project_desc
-          p.desc Blackberry, Raspberry Pi, Jelly Bean OS...<br />Limebus, minus the sour. Favorite a bus stop, & see route-specific info. Watch on the map as the bus makes its way. Get a push notification if the bus gets too full. Let us learn you, & we'll customize your Discover view with the schedules you use.
+          img(src="/images/product_2_mouseover.png")
+          p.title.text-600 Create, share, and discover near-term meetings.
+          p.desc Chat, share photos, and let friends know you're on the way with the real-time travel map.
+          a(href="http://doorsndots.com",target="_blank") go to page
 
     section#members.clearfix
       div.members.hidden-mobile
@@ -82,24 +87,17 @@ block content
           a.email(href="mailto:d429@easi6.com") d429@easi6.com
 
         div.member
-          img.member-photo(src="/images/members/eunsol_1.jpg")
-          img.member-photo-hover(src="/images/members/eunsol_2.jpg")
-          p.member-name Eunsol Kim
-          p.member-title Machine Learning Engineer
-          a.email(href="mailto:ssol@easi6.com") ssol@easi6.com
-
-        div.member
-          img.member-photo(src="/images/members/jiseob_1.jpg")
-          img.member-photo-hover(src="/images/members/jiseob_2.jpg")
-          p.member-name Jiseob Kim
-          p.member-title Machine Learning Engineer
-          a.email(href="mailto:nzer0@easi6.com") nzer0@easi6.com
-
-        div.member
           img.member-photo(src="/images/members/derek_1.jpg")
           img.member-photo-hover(src="/images/members/derek_2.jpg")
           p.member-name Derek Nguyen
           p.member-title UI Designer
+          a.email(href="mailto:derek@doorsndots.com") derek@doorsndots.com
+
+        div.member
+          img.member-photo(src="/images/members/myunkyu.png")
+          img.member-photo-hover(src="/images/members/myunkyu_2.png")
+          p.member-name Myunkyu Park
+          p.member-title Developer
           a.email(href="mailto:derek@doorsndots.com") derek@doorsndots.com
 
       div.members.visible-mobile
@@ -126,20 +124,15 @@ block content
               p.member-title Android Developer
               a.email(href="mailto:d429@easi6.com") d429@easi6.com
             div.item
-              img.member-photo(src="/images/members/eunsol_1.jpg")
-              p.member-name Eunsol Kim
-              p.member-title Machine Learning Engineer
-              a.email(href="mailto:ssol@easi6.com") ssol@easi6.com
-            div.item
-              img.member-photo(src="/images/members/jiseob_1.jpg")
-              p.member-name Jiseob Kim
-              p.member-title Machine Learning Engineer
-              a.email(href="mailto:nzer0@easi6.com") nzer0@easi6.com
-            div.item
               img.member-photo(src="/images/members/derek_1.jpg")
               p.member-name Derek Nguyen
               p.member-title UI Desinger
               a.email(href="mailto:derek@doorsndots.com") derek@doorsndots.com
+            div.item
+              img.member-photo(src="/images/members/myunkyu.png")
+              p.member-name Myunkyu Park
+              p.member-title Developer
+              a.email(href="mailto:spica@doorsndots.com") spica@doorsndots.com
           a.left.carousel-control(href="#members_carousel", data-slide="prev")
             ‹
           a.right.carousel-control(href="#members_carousel", data-slide="next")

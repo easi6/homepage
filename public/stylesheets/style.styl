@@ -49,12 +49,11 @@ body
   top:50%
   left: 70%
   h1
-    margin-top:30px
     a.logo
       display:block
-      background: url(/images/logo_icon.png) no-repeat
-      height: 53px
-      width: 85px
+      background: url(/images/nav_logo_130x130.png) no-repeat
+      height: 130px
+      width: 130px
       text-indent:-99999px
       margin:auto
   nav
@@ -66,16 +65,18 @@ body
   border-radius: 100px
   width:200px
   height:200px
-  a.logo
-    display:block
-    background: url(/images/logo_icon.png) no-repeat
-    height: 53px
-    width: 85px 
-    text-indent:-99999px
-    margin-top: 10px
-    margin:auto
+  h1
+    margin-top:30px
+    a.logo
+      display:block
+      background: url(/images/logo_icon.png) no-repeat
+      height: 53px
+      width: 85px 
+      text-indent:-99999px
+      margin-top: 10px
+      margin:auto
   nav
-    margin-top:40px
+    margin-top:25px
     margin-left:2px
     display:block
     ol
@@ -116,9 +117,7 @@ body
   padding: 0
   margin-top:0
   background:white
-  //box-shadow: 0 0 10px #888
   margin-bottom:30px
-  //border-radius:10px
   width:950px
   margin:auto
 
@@ -143,7 +142,7 @@ body
     width: 100px
     height: 100px
     text-decoration: none
-    font-family: Helvetica, Arial,sans-serif;
+    font-family: Helvetica, Arial,sans-serif
     border-radius: 50px
     border: 0px
     line-height: 80px
@@ -181,19 +180,77 @@ section
     margin-left: 490px
 
 #projects
+  font-family: 'Open sans', sans-serif
+  position: relative
+  #project_tomoni
+    float:left
+  #project_dnd
+    margin-left: 480px
+  .project
+    width: 470px
+    height: 470xp
+    display: block
   .project_img
     width: 470px
     height: 470px
     margin-bottom: 15px
-    background-color: #eee
-  #project_dnd
-    float:left
-    width: 470px;
-  #project_lb
-    width:470px
-    margin-left: 480px
-  p
-    line-height: 171%
+    display: block
+  .project_desc
+    width: 470px
+    height: 470px
+    display: none
+    position: relative
+    img
+      width: 60px
+      display: block
+      margin: auto
+      margin-top: 70px
+    .title 
+      font-size: 24px
+      color: #404040
+      line-height: 28px
+      width: 320px
+      margin: auto
+      text-align: center
+      margin-top: 50px
+    .desc
+      font-size: 16px
+      font-weight: 400
+      line-height: 26px
+      color: #666666
+      width: 405px
+      margin: auto
+      margin-top: 19px
+      text-align: center
+    a
+      display: block
+      width: 100px
+      font-size: 20px
+      color: #27a8e0
+      border: 1px solid #27a8e0
+      padding: 5px 10px 5px 10px
+      margin: auto
+      margin-top: 43px
+      text-decoration: none
+    
+#seperate_line
+  width: 2px
+  height: 470px
+  background-color: #e6e6e6
+  margin-left: 474px
+  position: absolute
+
+#project_tomoni:hover
+  .project_img
+    display: none
+  .project_desc
+    display: block
+
+#project_dnd:hover
+  .project_img
+    display: none
+  .project_desc
+    display: block
 
 #members
   .members.visible-mobile
@@ -245,7 +302,6 @@ section
       color: #333333
       font-size: 14px
       line-height: 171%
-
 
 a.email 
   text-decoration:none
