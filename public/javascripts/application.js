@@ -1,7 +1,14 @@
 $(document).ready(function(){
-  $('.carousel').carousel()
-  $('#nav').draggable()
+
+  $('img.hover').hover(function(e) {
+    var src = this.src.replace(/\?.*$/,"")+"?x="+Math.random();
+    console.log(src);
+    this.src = src;
+  });
+
   $('#main-nav').scrollspy()
+
+  /*
   var mapOptions = {
     center: new google.maps.LatLng(-34.397, 150.644),
     zoom: 16,
@@ -21,20 +28,5 @@ $(document).ready(function(){
         alert("Geocode was not successful for the following reason: " + status);
     }
   });
-
-  $('#main-nav').bind('activate', function(){
-    var text = $(this).find('li.active a').html();
-    var nav = $('#nav');
-    nav.removeClass("background_red background_green background_orange background_gray")
-    if (text == "projects") {
-      nav.addClass("background_orange");
-    } else if (text == "team") {
-      nav.addClass("background_green");
-    } else if (text == "contact") {
-      nav.addClass("background_gray");
-    } else {
-      nav.addClass("background_red");
-    }
-  });
-
+  */
 });
