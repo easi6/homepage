@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for file in *.jpg; do
+for file in *.png; do
   echo "resize $file"
-    /opt/ImageMagick/bin/convert $file -resize 1280x800^ -crop 1280x800+0+0 $file
+    /opt/ImageMagick/bin/convert $file -resize 75% $file
     echo "finished"
   done

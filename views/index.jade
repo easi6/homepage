@@ -129,15 +129,15 @@ block content
           li.member.jungmo
             .container
               div.name-area.font-replica-reg
-                h5.name Jungmo Kang | 강정모
-                h6.position Developer
+                h5.name YoungHo Seo | 서영호
+                h6.position Business Advisor
               div.photo-area
-                img.normal(src="/images/members/profile_grey_box.png")
-                img.hover(src="/images/members/profile_grey_box.png")
+                img.normal(src="/images/members/youngho_suh.png")
+                img.hover(src="/images/members/youngho_suh.gif")
               div.experience
                 ul.experience
                   li.item
-                    p.font-roboto Worked at Gloops in Tokyo
+                    p.font-roboto Master of China business
           li.member.chase
             .container
               div.name-area.font-replica-reg
@@ -166,3 +166,103 @@ block content
             a(href="http://blog.easi6.com", target="_blank")
       div.footer
         p.desc.font-roboto 2015 easi6 Inc. All Rights Reserved
+
+  section#modal
+    div#vox-modal.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+          .modal-body
+            .vox-container
+              .screenshot-container
+                .screenshot-area.vox
+                  img.vox(src="/images/vox1.png")
+                  img.vox(src="/images/vox2.png")
+                  img.vox(src="/images/vox3.png")
+              .description-container
+                .description-area.font-roboto
+                  .name-area
+                    h3.name Vox
+                  .desc-area 
+                    p.desc.
+                      VOX is an unique concept
+                      <br />application that you can share your
+                      <br />12 second life story
+                  .homepage-area
+                    p.url
+                      a.vox(href="http://voxstory.com") voxstory.com
+    div#minam-modal.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+          .modal-body
+            .vox-container
+              .screenshot-container
+                .screenshot-area.minam
+                  img.minam(src="/images/minam.png")
+              .description-container
+                .description-area.font-roboto
+                  .name-area
+                    h3.name You look gorgeous
+                  .desc-area 
+                    p.desc.
+                      This is a 'mean' application that you can compete with your friends. You can find out who is the most ugliest one.
+                  .homepage-area
+                    p.url
+                      a.vox(href="http://minam.easi6.com") minam.easi6.com
+    div#tomoni-modal.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+          .modal-body
+            .vox-container
+              .screenshot-container
+                .screenshot-area.tomoni
+                  img.tomoni(src="/images/tomoni1.png")
+                  img.tomoni(src="/images/tomoni2.png")
+                  img.tomoni(src="/images/tomoni3.png")
+              .description-container
+                .description-area.font-roboto
+                  .name-area
+                    h3.name Tomoni
+                  .desc-area 
+                    p.desc.
+                      Tomoni is an application that you can broadcast or participate activities near you. <br /> <br />
+                      Don't play alone, play together with Tomoni.
+                  .homepage-area
+                    p.url
+                      a.vox(href="http://tomoniapp.com") tomoniapp.com
+    div#dnd-modal.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+          .modal-body
+            .vox-container
+              .screenshot-container
+                .screenshot-area.dnd
+                  iframe(src="//player.vimeo.com/video/72255740", width="580", height="333", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+              .description-container
+                .description-area.font-roboto
+                  .name-area
+                    h3.name Doors&Dots
+                  .desc-area 
+                    p.desc.
+                      The Fast and Easy Way to Meet Your Friends, it is Doors & Dots.
+                  .homepage-area
+                    p.url
+                      a.vox(href="http://dootsndots.com") doorsndots.com
+    div#map-modal.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+          .modal-body
+            .vox-container
+              #map_canvas(style="height:340px; width:550px;")
+              .address
+                p.address.font-roboto.
+                  33,2nd floor, Nonhyeon-ro 11-gil,Secho-gu,Seoul,Korea,137-895
