@@ -7,6 +7,10 @@ $(document).ready(function(){
 
   $('#main-nav').scrollspy()
 
+  $('li.item.next').click(function(e) {
+    $('#easi6-modal').modal();
+  });
+
   $('li.item.vox').click(function(e) {
     $('#vox-modal').modal();
   });

@@ -7,7 +7,7 @@ block content
       h1
         a.logo(href="#about")
       nav#main-nav.navbar
-        ol.nav.font-replica-reg
+        ol.nav.font-replica-bold
           li
             a.nav-item(href="#about") ABOUT US
           li
@@ -24,26 +24,34 @@ block content
     section#about
       div#intro
         div#page-1.intro-page
-          img.page-title(src="/images/sentence1.png")
+          img.page-1(src="/images/bg-page-1.jpg")
+          .page-title
+            img.title-1(src="/images/sentence1.png")
         div#page-2.intro-page
-          img.page-title(src="/images/sentence2.png")
+          img.page-2(src="/images/bg-page-2.jpg")
+          .page-title
+            img.title-2(src="/images/sentence2.png")
         div#page-3.intro-page
-          img.page-title(src="/images/sentence3.png")
+          img.page-3(src="/images/bg-page-3.jpg")
+          .page-title
+            img.title-3(src="/images/sentence3.png")
         div#page-4.intro-page
-          img.page-title(src="/images/sentence4.png")
+          img.page-4(src="/images/bg-page-4.jpg")
+          .page-title
+            img.title-4(src="/images/sentence4.png")
       div#description
         p.desc.font-replica-reg
-          q "easi6, Inc., is a Korean-American tech startup headquartered in Jersey City, NJ, with a satellite office in Seoul, South Korea." 
+          q "To make people easy"
         div.logo 
           img.logo(src="/images/easi6_logo_green.png")
     section#works
       div.work-container
-        ol.works
-          li.item.next
-          li.item.vox
-          li.item.minam
-          li.item.tomoni
-          li.item.dnd
+        .content
+          ol.works
+            each val in ['next', 'vox', 'minam', 'tomoni', 'dnd']
+              li.item(class=val)
+                img(src="/images/btn_work_" + val + ".png")
+                img.hover(src="images/btn_hover_work_" + val + ".png")
       div.work-images
         img.works(src="/images/easi6_work.jpg")
 
@@ -53,7 +61,7 @@ block content
           li.member.kay
             .container
               div.name-area.font-replica-reg
-                h5.name Kyeongsik Kay Woo | 우경식
+                h5.name Kyeongsik Kay Woo  &nbsp;| &nbsp;우경식
                 h6.position Chief Executive Officer
               div.photo-area
                 img.normal(src="/images/members/Kay_woo.png")
@@ -67,7 +75,7 @@ block content
           li.member.jade
             .container
               div.name-area.font-replica-reg
-                h5.name Jade Han | 한광수
+                h5.name Jade Han &nbsp;| &nbsp;한광수
                 h6.position Lead Engineer
               div.photo-area
                 img.normal(src="/images/members/jade_han.png")
@@ -79,7 +87,7 @@ block content
           li.member.sunny
             .container
               div.name-area.font-replica-reg
-                h5.name Kyungsun Sunny Hong | 홍경선
+                h5.name Kyungsun Sunny Hong &nbsp;| &nbsp;홍경선
                 h6.position Partner / Lead Designer
               div.photo-area
                 img.normal(src="/images/members/sunny.png")
@@ -93,7 +101,7 @@ block content
           li.member.daewon
             .container
               div.name-area.font-replica-reg
-                h5.name Daewon Kim | 김대원
+                h5.name Daewon Kim &nbsp;| &nbsp;김대원
                 h6.position Developer
               div.photo-area
                 img.normal(src="/images/members/Daewon_kim.png")
@@ -105,7 +113,7 @@ block content
           li.member.taekmin
             .container
               div.name-area.font-replica-reg
-                h5.name Taekmin Kim | 김택민
+                h5.name Taekmin Kim &nbsp;| &nbsp;김택민
                 h6.position Developer
               div.photo-area
                 img.normal(src="/images/members/taekmin_kim.png")
@@ -117,7 +125,7 @@ block content
           li.member.myunkyu
             .container
               div.name-area.font-replica-reg
-                h5.name Myunkyu Park | 박면규 
+                h5.name Myunkyu Park &nbsp;| &nbsp;박면규 
                 h6.position Developer
               div.photo-area
                 img.normal(src="/images/members/Myunkyu_Park.png")
@@ -129,7 +137,7 @@ block content
           li.member.jungmo
             .container
               div.name-area.font-replica-reg
-                h5.name YoungHo Seo | 서영호
+                h5.name YoungHo Seo &nbsp;| &nbsp;서영호
                 h6.position Business Advisor
               div.photo-area
                 img.normal(src="/images/members/youngho_suh.png")
@@ -141,7 +149,7 @@ block content
           li.member.chase
             .container
               div.name-area.font-replica-reg
-                h5.name Chase | 체이스
+                h5.name Chase &nbsp;| &nbsp;체이스
                 h6.position Chief Dog
               div.photo-area
                 img.normal(src="/images/members/chase.png")
@@ -183,7 +191,7 @@ block content
               .description-container
                 .description-area.font-roboto
                   .name-area
-                    h3.name Vox
+                    h3.name VOX
                   .desc-area 
                     p.desc.
                       VOX is an unique concept
@@ -191,7 +199,7 @@ block content
                       <br />12 second life story
                   .homepage-area
                     p.url
-                      a.vox(href="http://voxstory.com") voxstory.com
+                      a.vox(href="http://voxstory.com", target="_blank") voxstory.com
     div#minam-modal.modal.fade
       .modal-dialog
         .modal-content
@@ -208,10 +216,10 @@ block content
                     h3.name You look gorgeous
                   .desc-area 
                     p.desc.
-                      This is a 'mean' application that you can compete with your friends. You can find out who is the most ugliest one.
+                      This is a 'mean' application that you can compete with your friends.<br /> You can find out who is the most ugliest one.
                   .homepage-area
                     p.url
-                      a.vox(href="http://minam.easi6.com") minam.easi6.com
+                      a.vox(href="http://minam.easi6.com", target="_blank") minam.easi6.com
     div#tomoni-modal.modal.fade
       .modal-dialog
         .modal-content
@@ -234,7 +242,7 @@ block content
                       Don't play alone, play together with Tomoni.
                   .homepage-area
                     p.url
-                      a.vox(href="http://tomoniapp.com") tomoniapp.com
+                      a.vox(href="http://tomoniapp.com", target="_blank") tomoniapp.com
     div#dnd-modal.modal.fade
       .modal-dialog
         .modal-content
@@ -254,7 +262,7 @@ block content
                       The Fast and Easy Way to Meet Your Friends, it is Doors & Dots.
                   .homepage-area
                     p.url
-                      a.vox(href="http://dootsndots.com") doorsndots.com
+                      a.vox(href="http://doorsndots.com", target="_blank") doorsndots.com
     div#map-modal.modal.fade
       .modal-dialog
         .modal-content
@@ -266,3 +274,21 @@ block content
               .address
                 p.address.font-roboto.
                   33,2nd floor, Nonhyeon-ro 11-gil,Secho-gu,Seoul,Korea,137-895
+    div#easi6-modal.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+          .modal-body
+            .vox-container
+              .screenshot-container
+                .screenshot-area
+                  img(src="/images/meeting.jpg")
+              .description-container
+                .description-area.font-roboto
+                  .name-area.no-name
+                    img.logo(src="/images/easi6_logo_green.png")
+                  .desc-area.no-name
+                    p.desc.
+                      Now we are working on the various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.<br /> <br />
+                      Stay tuned with us. We keep posting our new exciting projects here.

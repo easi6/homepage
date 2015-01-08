@@ -9,8 +9,9 @@ body
   font-family 'Replica Pro'
   font-weight 400
   src url("/font/ReplicaProRegular.otf")
-  font-family 'Replica Pro'
-  font-weight 500
+@font-face
+  font-family 'Replica Pro Bold'
+  font-weight 600
   src url("/font/ReplicaProBold.otf")
 
 .font-roboto
@@ -22,11 +23,12 @@ body
   font-weight 400
 
 .font-replica-bold
-  font-family 'Replica Pro'
-  font-weight 500
+  font-family 'Replica Pro Bold'
+  font-weight 600
 
 #container
-  width 960px
+  max-width 960px
+  width 100%
   position relative
   margin auto
 
@@ -34,7 +36,8 @@ body
   z-index 999
   position fixed
   background-color #00c496
-  width 960px
+  max-width 960px
+  width 100%
   height 75px
   .nav-container
     width 100%
@@ -84,13 +87,28 @@ body
 #intro
   .intro-page
     width 100%
-    height 600px
+    max-width 960px
+    max-height 600px
     position relative
     img
-      &.page-title
-        position absolute
-        left 48px
-        top 135px
+      display block
+      width 100%
+    .page-title
+      width 100%
+      position absolute
+      left 5%
+      top 20%
+      img
+        &.title-1
+          width: 87.8%
+        &.title-2
+          width: 81.5%
+        &.title-3
+          width 60%
+        &.title-4
+          width 72.3%
+
+  /*
   #page-1
     background url("/images/bg-page-1.jpg") no-repeat
   #page-2
@@ -99,6 +117,7 @@ body
     background url("/images/bg-page-3.jpg") no-repeat
   #page-4
     background url("/images/bg-page-4.jpg") no-repeat
+  */
 
 #description
   background-color #eeeeef
@@ -129,40 +148,54 @@ body
 #works
   div
     &.work-container
-      height 306px
       width 100%
-      padding-top: 60px
-      ol
-        &.works
-          padding-top 60px
-          margin-bottom 30px
-          li
-            &.item
-              width 156px
-              height 156px
-              float left
-              margin-left 30px
-              cursor pointer
-            &.next
-              background url("/images/btn_work_next.png") no-repeat
+      position relative
+      &.work-container:before
+        content ""
+        display block
+        padding-top 28%
+      .content
+        position absolute
+        top 0
+        left 0
+        bottom 0
+        right 0
+        ol
+          &.works
+            padding-top 9.6%
+            width 94%
+            max-width 900px
+            margin auto
+            margin-bottom 3.3%
+            float left
+            left 50%
+            transform translate(-50%, 0)
+            position relative
+            li
+              &.item
+                width 14.5%
+                max-width 140px
+                float left
+                margin-left 5.5%
+                cursor pointer
+                img
+                  width 100%
+                  &.hover
+                    display none
               &:hover
-                background url("/images/btn_hover_work_next.png") no-repeat
-            &.vox
-              background url("/images/btn_work_vox.png") no-repeat
-              &:hover
-                background url("/images/btn_hover_work_vox.png") no-repeat
-            &.minam
-              background url("/images/btn_work_minam.png") no-repeat
-              &:hover
-                background url("/images/btn_hover_work_minam.png") no-repeat
-            &.tomoni
-              background url("/images/btn_work_tomoni.png") no-repeat
-              &:hover
-                background url("/images/btn_hover_work_tomoni.png") no-repeat
-            &.dnd
-              background url("/images/btn_work_dnd.png") no-repeat
-              &:hover
-                background url("/images/btn_hover_work_dnd.png") no-repeat
+                img
+                  display none
+                  &.hover
+                    display block
+              &:first-child
+                margin-left: 2.75%
+              &:last-child
+                margin-right: 2.75%
+    &.work-images
+      width 100%
+      max-width 960px
+      img
+        width 100%
 
 #members
   height 100%
@@ -170,7 +203,7 @@ body
   div
     &.member-container
       position relative
-      padding-top 75px
+      padding-top 7.8%
       height 100%
       width 100%
       float left
@@ -180,12 +213,16 @@ body
           max-width 846px
           margin auto
           position relative
+          @media (max-width: 846px)
+            max-width 423px
           li
             &.member
               float left
               width 50%
               max-width 423px
               margin auto
+              @media (max-width: 846px)
+                width 100%
               .container
                 width 100%
                 max-width 375px
@@ -229,8 +266,8 @@ body
                       display none
                     .hover
                       display block
-                      animation-play-state initial
-                      -webkit-animation-play-state initial
+                      animation-play-state paused
+                      -webkit-animation-play-state paused
                 div
                   &.experience
                     height 138px
@@ -300,17 +337,41 @@ body
           text-align center
           font-size 12px
           margin-bottom 45px
+          color #808080
 
 #modal
   .modal
     border-radius 5px
+    &.fade
+      .modal-dialog
+        transform translate(-50%, -100%)
+        opacity 0
+        transition transform 0.4s ease-out, opacity 0.4s ease-in
+    &.in
+      .modal-dialog
+        opacity 1.0
+        transform translate(-50%, -55%)
     .modal-dialog
-      width 960px
-      height 525px
+      width 100%
+      max-width 960px
+      //height 525px
+      max-height 525px
       border-radius 5px
       background-color #fff
+      position absolute
+      top 50%
+      left 50%
+      &:before
+        content ""
+        display block
+        padding-top 55%
       .modal-content
-        float left
+        position absolute
+        top 0
+        left 0
+        bottom 0
+        right 0
+        //float left
         width 100%
         height 100%
         border 0
@@ -338,29 +399,34 @@ body
           position relative
           .screenshot-container
             float left
-            width 675px
+            width 70%
           .description-container
             float left
-            width 285px
+            width 30%
             margin-top 75px
             .description-area
               margin-left 7px
-              margin-top 45px
-              width 225px
+              margin-top 15%
+              width 80%
               color: #59595b
               .name-area
                 border-bottom solid 1px #808080
                 height 31px
                 h3
                   font-size: 19px
+                &.no-name
+                  border: 0
               .desc-area
                 border-bottom solid 1px #808080
                 border-top solid 1px #808080
                 min-height 152px
-                max-height 187px
+                //max-height 187px
                 margin-top 38px
+                &.no-name
+                  margin-top 18px
                 p
                   &.desc
+                    height: 100%
                     margin-top: 26px
                     margin-bottom: 26px
                     text-align left
@@ -382,10 +448,11 @@ body
   #vox-modal
     .screenshot-area
       &.vox
-        margin-left 30px
-        margin-top 48px
+        margin-left 4.4%
+        margin-top 7%
         img
           &.vox
+            width 30%
             margin-left 8px
   #minam-modal
     .screenshot-area
@@ -397,6 +464,10 @@ body
       margin-top 48px
       img
         margin-left 8px
+  #easi6-modal
+    .screenshot-area
+      margin-left 38px
+      margin-top 48px
   #dnd-modal
     .screenshot-area
       margin-left 75px

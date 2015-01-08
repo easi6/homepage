@@ -9,8 +9,10 @@ body {
   font-family: 'Replica Pro';
   font-weight: 400;
   src: url("/font/ReplicaProRegular.otf");
-  font-family: 'Replica Pro';
-  font-weight: 500;
+}
+@font-face {
+  font-family: 'Replica Pro Bold';
+  font-weight: 600;
   src: url("/font/ReplicaProBold.otf");
 }
 .font-roboto {
@@ -22,11 +24,12 @@ body {
   font-weight: 400;
 }
 .font-replica-bold {
-  font-family: 'Replica Pro';
-  font-weight: 500;
+  font-family: 'Replica Pro Bold';
+  font-weight: 600;
 }
 #container {
-  width: 960px;
+  max-width: 960px;
+  width: 100%;
   position: relative;
   margin: auto;
 }
@@ -34,7 +37,8 @@ body {
   z-index: 999;
   position: fixed;
   background-color: #00c496;
-  width: 960px;
+  max-width: 960px;
+  width: 100%;
   height: 75px;
 }
 #nav .nav-container {
@@ -86,25 +90,31 @@ body {
 }
 #intro .intro-page {
   width: 100%;
-  height: 600px;
+  max-width: 960px;
+  max-height: 600px;
   position: relative;
 }
-#intro .intro-page img.page-title {
+#intro .intro-page img {
+  display: block;
+  width: 100%;
+}
+#intro .intro-page .page-title {
+  width: 100%;
   position: absolute;
-  left: 48px;
-  top: 135px;
+  left: 5%;
+  top: 20%;
 }
-#intro #page-1 {
-  background: url("/images/bg-page-1.jpg") no-repeat;
+#intro .intro-page .page-title img.title-1 {
+  width: 87.8%;
 }
-#intro #page-2 {
-  background: url("/images/bg-page-2.jpg") no-repeat;
+#intro .intro-page .page-title img.title-2 {
+  width: 81.5%;
 }
-#intro #page-3 {
-  background: url("/images/bg-page-3.jpg") no-repeat;
+#intro .intro-page .page-title img.title-3 {
+  width: 60%;
 }
-#intro #page-4 {
-  background: url("/images/bg-page-4.jpg") no-repeat;
+#intro .intro-page .page-title img.title-4 {
+  width: 72.3%;
 }
 #description {
   background-color: #eeeeef;
@@ -133,50 +143,63 @@ body {
   display: block;
 }
 #works div.work-container {
-  height: 306px;
   width: 100%;
-  padding-top: 60px;
+  position: relative;
 }
-#works div.work-container ol.works {
-  padding-top: 60px;
-  margin-bottom: 30px;
+#works div.work-container.work-container:before {
+  content: "";
+  display: block;
+  padding-top: 28%;
 }
-#works div.work-container ol.works li.item {
-  width: 156px;
-  height: 156px;
+#works div.work-container .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#works div.work-container .content ol.works {
+  padding-top: 9.6%;
+  width: 94%;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 3.3%;
   float: left;
-  margin-left: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: relative;
+}
+#works div.work-container .content ol.works li.item {
+  width: 14.5%;
+  max-width: 140px;
+  float: left;
+  margin-left: 5.5%;
   cursor: pointer;
 }
-#works div.work-container ol.works li.next {
-  background: url("/images/btn_work_next.png") no-repeat;
+#works div.work-container .content ol.works li.item img {
+  width: 100%;
 }
-#works div.work-container ol.works li.next:hover {
-  background: url("/images/btn_hover_work_next.png") no-repeat;
+#works div.work-container .content ol.works li.item img.hover {
+  display: none;
 }
-#works div.work-container ol.works li.vox {
-  background: url("/images/btn_work_vox.png") no-repeat;
+#works div.work-container .content ol.works li:hover img {
+  display: none;
 }
-#works div.work-container ol.works li.vox:hover {
-  background: url("/images/btn_hover_work_vox.png") no-repeat;
+#works div.work-container .content ol.works li:hover img.hover {
+  display: block;
 }
-#works div.work-container ol.works li.minam {
-  background: url("/images/btn_work_minam.png") no-repeat;
+#works div.work-container .content ol.works li:first-child {
+  margin-left: 2.75%;
 }
-#works div.work-container ol.works li.minam:hover {
-  background: url("/images/btn_hover_work_minam.png") no-repeat;
+#works div.work-container .content ol.works li:last-child {
+  margin-right: 2.75%;
 }
-#works div.work-container ol.works li.tomoni {
-  background: url("/images/btn_work_tomoni.png") no-repeat;
+#works div.work-images {
+  width: 100%;
+  max-width: 960px;
 }
-#works div.work-container ol.works li.tomoni:hover {
-  background: url("/images/btn_hover_work_tomoni.png") no-repeat;
-}
-#works div.work-container ol.works li.dnd {
-  background: url("/images/btn_work_dnd.png") no-repeat;
-}
-#works div.work-container ol.works li.dnd:hover {
-  background: url("/images/btn_hover_work_dnd.png") no-repeat;
+#works div.work-images img {
+  width: 100%;
 }
 #members {
   height: 100%;
@@ -184,7 +207,7 @@ body {
 }
 #members div.member-container {
   position: relative;
-  padding-top: 75px;
+  padding-top: 7.8%;
   height: 100%;
   width: 100%;
   float: left;
@@ -195,11 +218,21 @@ body {
   margin: auto;
   position: relative;
 }
+@media (max-width: 846px) {
+  #members div.member-container ol.members {
+    max-width: 423px;
+  }
+}
 #members div.member-container ol.members li.member {
   float: left;
   width: 50%;
   max-width: 423px;
   margin: auto;
+}
+@media (max-width: 846px) {
+  #members div.member-container ol.members li.member {
+    width: 100%;
+  }
 }
 #members div.member-container ol.members li.member .container {
   width: 100%;
@@ -249,8 +282,8 @@ body {
 }
 #members div.member-container ol.members li.member .container .photo-area:hover .hover {
   display: block;
-  animation-play-state: initial;
-  -webkit-animation-play-state: initial;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
 }
 #members div.member-container ol.members li.member .container div.experience {
   height: 138px;
@@ -326,18 +359,41 @@ body {
   text-align: center;
   font-size: 12px;
   margin-bottom: 45px;
+  color: #808080;
 }
 #modal .modal {
   border-radius: 5px;
 }
+#modal .modal.fade .modal-dialog {
+  transform: translate(-50%, -100%);
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-in;
+}
+#modal .modal.in .modal-dialog {
+  opacity: 1;
+  transform: translate(-50%, -55%);
+}
 #modal .modal .modal-dialog {
-  width: 960px;
-  height: 525px;
+  width: 100%;
+  max-width: 960px;
+  max-height: 525px;
   border-radius: 5px;
   background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#modal .modal .modal-dialog:before {
+  content: "";
+  display: block;
+  padding-top: 55%;
 }
 #modal .modal .modal-dialog .modal-content {
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   border: 0;
@@ -369,17 +425,17 @@ body {
 }
 #modal .modal .modal-dialog .modal-content .vox-container .screenshot-container {
   float: left;
-  width: 675px;
+  width: 70%;
 }
 #modal .modal .modal-dialog .modal-content .vox-container .description-container {
   float: left;
-  width: 285px;
+  width: 30%;
   margin-top: 75px;
 }
 #modal .modal .modal-dialog .modal-content .vox-container .description-container .description-area {
   margin-left: 7px;
-  margin-top: 45px;
-  width: 225px;
+  margin-top: 15%;
+  width: 80%;
   color: #59595b;
 }
 #modal .modal .modal-dialog .modal-content .vox-container .description-container .description-area .name-area {
@@ -389,14 +445,20 @@ body {
 #modal .modal .modal-dialog .modal-content .vox-container .description-container .description-area .name-area h3 {
   font-size: 19px;
 }
+#modal .modal .modal-dialog .modal-content .vox-container .description-container .description-area .name-area.no-name {
+  border: 0;
+}
 #modal .modal .modal-dialog .modal-content .vox-container .description-container .description-area .desc-area {
   border-bottom: solid 1px #808080;
   border-top: solid 1px #808080;
   min-height: 152px;
-  max-height: 187px;
   margin-top: 38px;
 }
+#modal .modal .modal-dialog .modal-content .vox-container .description-container .description-area .desc-area.no-name {
+  margin-top: 18px;
+}
 #modal .modal .modal-dialog .modal-content .vox-container .description-container .description-area .desc-area p.desc {
+  height: 100%;
   margin-top: 26px;
   margin-bottom: 26px;
   text-align: left;
@@ -421,10 +483,11 @@ body {
   color: #58595b;
 }
 #modal #vox-modal .screenshot-area.vox {
-  margin-left: 30px;
-  margin-top: 48px;
+  margin-left: 4.4%;
+  margin-top: 7%;
 }
 #modal #vox-modal .screenshot-area.vox img.vox {
+  width: 30%;
   margin-left: 8px;
 }
 #modal #minam-modal .screenshot-area {
@@ -437,6 +500,10 @@ body {
 }
 #modal #tomoni-modal .screenshot-area img {
   margin-left: 8px;
+}
+#modal #easi6-modal .screenshot-area {
+  margin-left: 38px;
+  margin-top: 48px;
 }
 #modal #dnd-modal .screenshot-area {
   margin-left: 75px;
