@@ -258,9 +258,9 @@
     "@modal-backdrop-opacity": ".5",
     "@modal-header-border-color": "#e5e5e5",
     "@modal-footer-border-color": "@modal-header-border-color",
-    "@modal-lg": "1280px",
-    "@modal-md": "960px",
-    "@modal-sm": "480px",
+    "@modal-lg": "900px",
+    "@modal-md": "600px",
+    "@modal-sm": "300px",
     "@alert-padding": "15px",
     "@alert-border-radius": "@border-radius-base",
     "@alert-link-font-weight": "bold",
@@ -376,14 +376,17 @@
     "@hr-border": "@gray-lighter"
   },
   "css": [
-    "alerts.less",
+    "responsive-utilities.less",
+    "responsive-embed.less",
     "close.less",
+    "component-animations.less",
     "modals.less"
   ],
   "js": [
-    "alert.js",
     "modal.js",
-    "scrollspy.js"
+    "collapse.js",
+    "scrollspy.js",
+    "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=9574f9895627d6b5aa61"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=a2dc6916c3d6cbd89966"
 }

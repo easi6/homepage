@@ -4,21 +4,28 @@ block content
 
   div#nav
     div.nav-container
-      h1
-        a.logo(href="#about")
-      nav#main-nav.navbar
-        ol.nav.font-replica-bold
-          li
-            a.nav-item(href="#about") ABOUT US
-          li
-            a.nav-item(href="#works") WORKS
-          li
-            a.nav-item(href="#contact") TEAM
-        //
-          li.left
-            a.nav-item(href="http://blog.easi6.com") blog
-          li.right
-            a.nav-item(href="#members") team
+      .nav-content
+        h1
+          a.logo(href="#about")
+            img(src="/images/easi6_logo_white.png")
+        nav#main-nav.navbar.hidden-xs
+          ol.nav.font-replica-bold
+            li
+              a.nav-item(href="#about") ABOUT US
+            li
+              a.nav-item(href="#works") WORKS
+            li
+              a.nav-item(href="#contact") TEAM
+        nav#main-nav-mobile.navbar.visible-xs-block
+          button.toggle-nav.collapsed(data-toggle="collapse", data-target="#collapse-nav")
+          #collapse-nav.collapse
+            ol.nav.font-replica-bold
+              li
+                a.nav-item(href="#about") ABOUT US
+              li
+                a.nav-item(href="#works") WORKS
+              li
+                a.nav-item(href="#contact") TEAM
 
   div#main-container
     section#about
@@ -46,12 +53,78 @@ block content
           img.logo(src="/images/easi6_logo_green.png")
     section#works
       div.work-container
-        .content
+        .content.hidden-xs
           ol.works
             each val in ['next', 'vox', 'minam', 'tomoni', 'dnd']
               li.item(class=val)
                 img(src="/images/btn_work_" + val + ".png")
                 img.hover(src="images/btn_hover_work_" + val + ".png")
+        .content-mobile.visible-xs-block
+          ol.works
+            li.work
+              .desc-container.next
+                .icon-container
+                  img(src="/images/icn_next.png")
+                .text-container
+                  p.desc.font-roboto.
+                    Now we are working on the various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.<br />
+                    Stay tuned with us. We keep posting our new exciting projects here.
+            li.work.vox
+              .desc-container.vox
+                .icon-container
+                  img(src="/images/icn_vox.png")
+                .text-container
+                  p.desc.font-roboto.bold.
+                    VOX is an unique concept
+                    <br />application that you can share your
+                    <br />12 second life story
+                  p.url.font-roboto
+                    a.vox(href="http://voxstory.com", target="_blank") voxstory.com
+              .image-container.vox
+                .image-area.vox
+                  img.vox(src="/images/vox1.png")
+                  img.vox(src="/images/vox2.png")
+                  img.vox(src="/images/vox3.png")
+            li.work.minam
+              .desc-container.minam
+                .icon-container
+                  img(src="/images/icn_minam.png")
+                .text-container
+                  p.desc.font-roboto.bold.
+                    "You look gorgeous" is a 'mean' application that you can compete with your friends.<br /> You can find out who is the most ugliest one.
+                  p.url.font-roboto
+                    a.minam(href="http://minam.easi6.com", target="_blank") minam.easi6.com
+              .image-container.minam
+                .image-area.minam
+                  img.minam(src="/images/minam.png")
+            li.work.tomoni
+              .desc-container.tomoni
+                .icon-container
+                  img(src="/images/icn_tomoni.png")
+                .text-container
+                  p.desc.font-roboto.bold.
+                    Tomoni is an application that you can broadcast or participate activities near you.
+                    Don't play alone, play together with Tomoni.
+                  p.url.font-roboto
+                    a.tomoni(href="http://tomoniapp.com", target="_blank") tomoniapp.com
+              .image-container.tomoni
+                .image-area.tomoni
+                  img.tomoni(src="/images/tomoni1.png")
+                  img.tomoni(src="/images/tomoni2.png")
+                  img.tomoni(src="/images/tomoni3.png")
+            li.work.dnd
+              .desc-container.dnd
+                .icon-container
+                  img(src="/images/icn_dnd.png")
+                .text-container
+                  p.desc.font-roboto.bold.
+                    The Fast and Easy Way to Meet Your Friends, it is Doors & Dots.
+                  p.url.font-roboto
+                    a.vox(href="http://doorsndots.com", target="_blank") doorsndots.com
+              .video-container.dnd
+                .video-area.dnd
+                  iframe(src="//player.vimeo.com/video/72255740", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+
       div.work-images
         img.works(src="/images/easi6_work.jpg")
 
@@ -164,14 +237,24 @@ block content
         ul.contacts
           li.item.map
             a(href="#")
+              img(src="/images/btn_map.png")
+              img.hover(src="/images/btn_hover_map.png")
           li.item.mail
             a(href="mailto:info@easi6.com", target="_top")
+              img(src="/images/btn_email.png")
+              img.hover(src="/images/btn_hover_email.png")
           li.item.facebook
             a(href="https://facebook.com/easi6", target="_blank")
+              img(src="/images/btn_facebook.png")
+              img.hover(src="/images/btn_hover_facebook.png")
           li.item.twitter
             a(href="https://twitter.com/easi6", target="_blank")
+              img(src="/images/btn_twitter.png")
+              img.hover(src="/images/btn_hover_twitter.png")
           li.item.blog
             a(href="http://blog.easi6.com", target="_blank")
+              img(src="/images/btn_blog.png")
+              img.hover(src="/images/btn_hover_blog.png")
       div.footer
         p.desc.font-roboto 2015 easi6 Inc. All Rights Reserved
 
@@ -219,7 +302,7 @@ block content
                       This is a 'mean' application that you can compete with your friends.<br /> You can find out who is the most ugliest one.
                   .homepage-area
                     p.url
-                      a.vox(href="http://minam.easi6.com", target="_blank") minam.easi6.com
+                      a.minam(href="http://minam.easi6.com", target="_blank") minam.easi6.com
     div#tomoni-modal.modal.fade
       .modal-dialog
         .modal-content
@@ -242,7 +325,7 @@ block content
                       Don't play alone, play together with Tomoni.
                   .homepage-area
                     p.url
-                      a.vox(href="http://tomoniapp.com", target="_blank") tomoniapp.com
+                      a.tomoni(href="http://tomoniapp.com", target="_blank") tomoniapp.com
     div#dnd-modal.modal.fade
       .modal-dialog
         .modal-content

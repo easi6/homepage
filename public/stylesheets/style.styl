@@ -1,3 +1,6 @@
+// Variables
+mobile_screen_size = 640px
+
 body
   font-family 'Open sans', sans-serif
   font-size 14px
@@ -38,44 +41,117 @@ body
   background-color #00c496
   max-width 960px
   width 100%
-  height 75px
+  //height 75px
   .nav-container
     width 100%
-    height 100%
+    //height 100%
     position relative
-    h1
+    &:before
+      content ""
+      display block
+      padding-top 7.8%
+      @media (max-width: 767px)
+        padding-top 9.375%
+    .nav-content
       position absolute
-      top 50%
-      transform translate(0, -50%)
-      margin-left 48px
-      a
-        &.logo
-          display block
-          background url("/images/easi6_logo_white.png") no-repeat
-          width 95px
-          height 29px
-    nav#main-nav
-      color #fff
-      ol
-        &.nav
-          float right
-          position absolute
-          top 50%
-          transform translate(0, -50%)
-          right 48px
-          li
-            float left
-            display inline-block
-            margin-left 56px
-            a
-              &.nav-item
-                text-decoration none
-                font-size 16px
-                color #fff
-            &.active
+      top 0
+      left 0
+      bottom 0
+      right 0
+      h1
+        position absolute
+        top 50%
+        transform translate(0, -50%)
+        -webkit-transform translate(0, -50%)
+        -ms-transform translate(0, -50%)
+        margin-left 48px
+        @media (max-width: 767px)
+          margin-left 7.5%
+        a
+          &.logo
+            display block
+            /*
+            //background url("/images/easi6_logo_white.png") no-repeat
+            width 95px
+            height 29px
+            @media (max-width: 767px)
+              width 14.8%
+              height 4.53%
+              */
+            img
+              width 100%
+              height 100%
+              border none
+              margin 0
+              padding 0
+      nav#main-nav
+        color #fff
+        ol
+          &.nav
+            float right
+            position absolute
+            top 50%
+            transform translate(0, -50%)
+            -webkit-transform translate(0, -50%)
+            -ms-transform translate(0, -50%)
+            right 48px
+            li
+              float left
+              display inline-block
+              margin-left 56px
               a
                 &.nav-item
-                  color #005d61
+                  text-decoration none
+                  font-size 16px
+                  color #fff
+              &.active
+                a
+                  &.nav-item
+                    color #005d61
+      nav#main-nav-mobile
+        //position relative
+        display block
+        button.toggle-nav
+          width 33px
+          height 5px
+          top 33%
+          background url("/images/btn_bar_1.png") no-repeat
+          position absolute
+          right 35px
+          border none
+          outline none
+          margin 0
+          padding 0
+          &.collapsed
+            height 30px
+            background url("/images/btn_bar_3.png") no-repeat
+            top 3.125%
+        width 100%
+        background-color #00c496
+        #collapse-nav
+          position relative
+          //margin-top 9.375%
+          margin-top 9%
+          height 90px
+          ol.nav
+            position relative
+            width 100%
+            li
+              text-align right
+              display block
+              width 100%
+              height 30px
+              a
+                margin-right 35px
+                &.nav-item
+                  font-size 20px
+                  text-decoration none
+                  color #fff
+              &.active
+                a
+                  &.nav-item
+                    color #005d61
+
 
 #main-container
   padding 0
@@ -90,6 +166,7 @@ body
     max-width 960px
     max-height 600px
     position relative
+    overflow-x hidden
     img
       display block
       width 100%
@@ -154,6 +231,8 @@ body
         content ""
         display block
         padding-top 28%
+        @media (max-width: 767px)
+          padding-top 0
       .content
         position absolute
         top 0
@@ -170,6 +249,8 @@ body
             float left
             left 50%
             transform translate(-50%, 0)
+            -webkit-transform translate(-50%, 0)
+            -ms-transform translate(-50%, 0)
             position relative
             li
               &.item
@@ -191,6 +272,89 @@ body
                 margin-left: 2.75%
               &:last-child
                 margin-right: 2.75%
+      .content-mobile
+        width 84.375%
+        margin auto
+        ol.works
+          width 100%
+          margin 0
+          padding 0
+          li.work
+            width 100%
+            margin-top 11%
+            float left
+            &:last-child
+              margin-bottom 14%
+            &.vox
+              margin-top 13.8%
+            .desc-container
+              position relative
+              width 100%
+              .icon-container
+                float left
+                width 30%
+                max-width 190px
+                margin auto
+                img
+                  width 30%
+                  max-width 190px
+                  position absolute
+                  top 50%
+                  transform translate(0, -50%)
+                  -webkit-transform translate(0, -50%)
+                  -ms-transform translate(0, -50%)
+              .text-container
+                width 63.75%
+                margin-left 36.25%
+                p.desc
+                  font-size 22px
+                  line-height 1.5
+                  color: #59595b
+                p.url
+                  margin-top 20px
+                  font-size 24px
+                  height 26px
+                  a
+                    text-decoration none
+                    height 26px
+                    color #6d6e71
+                    display inline-block
+                    border-bottom solid 1px #6d6e71
+            .image-container
+              position relative
+              float left
+              width 100%
+              margin-top 3.7%
+              &.vox
+                margin-top 5.5%
+              img
+                &.vox
+                  width 30%
+                  margin-left 2.5%
+                &.tomoni
+                  width 30%
+                  margin-left 2.5%
+                &.minam
+                  width 100%
+            .video-container
+              position relative
+              width 100%
+              margin-top 3.7%
+              &:before
+                content ""
+                display block
+                padding-top 56.25%
+              .video-area
+                position absolute
+                top 0
+                left 0
+                right 0
+                bottom 0
+                iframe
+                  margin-top 5%
+                  width 100%
+                  height 100%
+
     &.work-images
       width 100%
       max-width 960px
@@ -226,6 +390,9 @@ body
               .container
                 width 100%
                 max-width 375px
+                @media(max-width: 375px)
+                  width 100%
+                  max-width auto
                 margin auto
                 .name-area
                   width 100%
@@ -255,6 +422,8 @@ body
                   margin-top 21px
                   width 100%
                   height 100%
+                  img
+                    width 100%
                   .normal
                     display block
                   .hover
@@ -264,8 +433,12 @@ body
                   &:hover
                     .normal
                       display none
+                      @media (max-width: 767px)
+                        display block
                     .hover
                       display block
+                        @media (max-width: 767px)
+                          display none
                       animation-play-state paused
                       -webkit-animation-play-state paused
                 div
@@ -297,40 +470,28 @@ body
           max-width 525px
           li
             &.item
-              width 71px
-              height 71px
+              width 13.5%
+              height 13.5%
               float left
-              margin-left 30px
+              margin-left 5.6%
               cursor pointer
               a
                 display inline-block
                 width 100%
                 height 100%
-            &.map
-              a
-                background url("/images/btn_map.png") no-repeat
+                img
+                  width 100%
+                  &.hover
+                    display none
                 &:hover
-                  background url("/images/btn_hover_map.png") no-repeat
-            &.mail
-              a
-                background url("/images/btn_email.png") no-repeat
-                &:hover
-                  background url("/images/btn_hover_email.png") no-repeat
-            &.facebook
-              a
-                background url("/images/btn_facebook.png") no-repeat
-                &:hover
-                  background url("/images/btn_hover_facebook.png") no-repeat
-            &.twitter
-              a
-                background url("/images/btn_twitter.png") no-repeat
-                &:hover
-                  background url("/images/btn_hover_twitter.png") no-repeat
-            &.blog
-              a
-                background url("/images/btn_blog.png") no-repeat
-                &:hover
-                  background url("/images/btn_hover_blog.png") no-repeat
+                  img
+                    display none
+                    @media (max-width: 767px)
+                      display block
+                  img.hover
+                    display block
+                    @media (max-width: 767px)
+                      display none
     &.footer
       p
         &.desc
@@ -345,17 +506,24 @@ body
     &.fade
       .modal-dialog
         transform translate(-50%, -100%)
+        -webkit-transform translate(-50%, -100%)
+        -ms-transform translate(-50%, -100%)
         opacity 0
         transition transform 0.4s ease-out, opacity 0.4s ease-in
+        -webkit-transition transform 0.4s ease-out, opacity 0.4s ease-in
+        -ms-transition transform 0.4s ease-out, opacity 0.4s ease-in
     &.in
       .modal-dialog
         opacity 1.0
         transform translate(-50%, -55%)
+        -webkit-transform translate(-50%, -55%)
+        -ms-transform translate(-50%, -55%)
     .modal-dialog
       width 100%
       max-width 960px
       //height 525px
       max-height 525px
+      overflow-y auto
       border-radius 5px
       background-color #fff
       position absolute
@@ -388,6 +556,7 @@ body
               width 47px
               height 47px
               background url("/images/btn_x.png") no-repeat
+              z-index 99999
         .modal-body
           padding 0
           margin 0
@@ -400,10 +569,17 @@ body
           .screenshot-container
             float left
             width 70%
+            @media (max-width: 750px)
+              width 100%
+              float none
           .description-container
             float left
             width 30%
-            margin-top 75px
+            margin-top 7.8%
+            @media (max-width: 750px)
+              width 100%
+              margin-top 5%
+              float none
             .description-area
               margin-left 7px
               margin-top 15%
@@ -450,10 +626,17 @@ body
       &.vox
         margin-left 4.4%
         margin-top 7%
+        @media (max-width: 750px)
+          width 80%
+          margin auto
+          margin-top 3%
         img
           &.vox
             width 30%
             margin-left 8px
+            @media (max-width: 750px)
+              width 30%
+              margin-left 2.5%
   #minam-modal
     .screenshot-area
       margin-left 33px

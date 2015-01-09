@@ -1,11 +1,19 @@
 $(document).ready(function(){
+  $('#collapse-nav ol.nav li a').click(function(e) {
+    $('#collapse-nav').collapse('toggle');
+  });
+
+  $('#collapse-nav').on('shown.bs.collapse', function() {
+    $('body').scrollspy({target: '#main-nav-mobile'});
+  });
 
   $('img.hover').hover(function(e) {
     var src = this.src.replace(/\?.*$/,"")+"?x="+Math.random();
     this.src = src;
   });
 
-  $('#main-nav').scrollspy()
+  $('#main-nav').scrollspy();
+  $('#main-nav-mobile').scrollspy();
 
   $('li.item.next').click(function(e) {
     $('#easi6-modal').modal();
