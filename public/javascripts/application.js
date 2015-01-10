@@ -3,8 +3,14 @@ $(document).ready(function(){
     $('#collapse-nav').collapse('toggle');
   });
 
-  $('#collapse-nav').on('shown.bs.collapse', function() {
+  $('#collapse-nav').on('show.bs.collapse', function() {
+    $('body').attr('data-target', '#main-nav-mobile');
     $('body').scrollspy({target: '#main-nav-mobile'});
+  });
+
+  $('#collapse-nav').on('hide.bs.collapse', function() {
+    $('body').attr('data-target', '#main-nav');
+    $('body').scrollspy({target: '#main-nav'});
   });
 
   $('img.hover').hover(function(e) {
@@ -55,19 +61,23 @@ var mapOptions = {
 function loadMap()
 {
   var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-
   var geocoder = new google.maps.Geocoder();
   var address = "서울특별시 서초구 양재2동 290-2";
   geocoder.geocode( { 'address': address}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location,
-          icon: '/images/icn_map.png'
-        });
-      } else {
-        alert("Geocode was not successful for the following reason: " + status);
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location,
+        icon: '/images/icn_map.png'
+      });
+    } else {
+      alert("Geocode was not successful for the following reason: " + status);
     }
+  });
+
+  google.maps.event.addListenerOnce(map, 'idle', function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(mapOptions.center);
   });
 }

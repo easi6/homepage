@@ -15,17 +15,21 @@ block content
             li
               a.nav-item(href="#works") WORKS
             li
-              a.nav-item(href="#contact") TEAM
+              a.nav-item(href="#members") TEAM
         nav#main-nav-mobile.navbar.visible-xs-block
-          button.toggle-nav.collapsed(data-toggle="collapse", data-target="#collapse-nav")
-          #collapse-nav.collapse
+          a.toggle-nav.collapsed(data-toggle="collapse", data-target="#collapse-nav")
+            img(src="/images/btn_bar_1.png")
+            img.collapsed(src="/images/btn_bar_3.png")
+          #collapse-nav.collapse.navbar
             ol.nav.font-replica-bold
               li
                 a.nav-item(href="#about") ABOUT US
               li
                 a.nav-item(href="#works") WORKS
               li
-                a.nav-item(href="#contact") TEAM
+                a.nav-item(href="#members") TEAM
+              //li
+              //  a.nav-item(href="http://blog.easi6.com", target="_blank") BLOG
 
   div#main-container
     section#about
@@ -66,18 +70,18 @@ block content
                 .icon-container
                   img(src="/images/icn_next.png")
                 .text-container
-                  p.desc.font-roboto.
-                    Now we are working on the various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.<br />
-                    Stay tuned with us. We keep posting our new exciting projects here.
+                  p.desc.font-roboto
+                    |Now we are working on the various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.<br />
+                    |Stay tuned with us. We keep posting our new exciting projects here.
             li.work.vox
               .desc-container.vox
                 .icon-container
                   img(src="/images/icn_vox.png")
                 .text-container
-                  p.desc.font-roboto.bold.
-                    VOX is an unique concept
-                    <br />application that you can share your
-                    <br />12 second life story
+                  p.desc.font-roboto
+                    |VOX is an unique concept
+                    |<br />application that you can share your
+                    |12 second life story
                   p.url.font-roboto
                     a.vox(href="http://voxstory.com", target="_blank") voxstory.com
               .image-container.vox
@@ -90,8 +94,8 @@ block content
                 .icon-container
                   img(src="/images/icn_minam.png")
                 .text-container
-                  p.desc.font-roboto.bold.
-                    "You look gorgeous" is a 'mean' application that you can compete with your friends.<br /> You can find out who is the most ugliest one.
+                  p.desc.font-roboto.
+                    "You look gorgeous" is a 'mean' application that you can compete with your friends. You can find out who is the most ugliest one.
                   p.url.font-roboto
                     a.minam(href="http://minam.easi6.com", target="_blank") minam.easi6.com
               .image-container.minam
@@ -102,7 +106,7 @@ block content
                 .icon-container
                   img(src="/images/icn_tomoni.png")
                 .text-container
-                  p.desc.font-roboto.bold.
+                  p.desc.font-roboto.
                     Tomoni is an application that you can broadcast or participate activities near you.
                     Don't play alone, play together with Tomoni.
                   p.url.font-roboto
@@ -117,7 +121,7 @@ block content
                 .icon-container
                   img(src="/images/icn_dnd.png")
                 .text-container
-                  p.desc.font-roboto.bold.
+                  p.desc.font-roboto.
                     The Fast and Easy Way to Meet Your Friends, it is Doors & Dots.
                   p.url.font-roboto
                     a.vox(href="http://doorsndots.com", target="_blank") doorsndots.com
@@ -125,7 +129,7 @@ block content
                 .video-area.dnd
                   iframe(src="//player.vimeo.com/video/72255740", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
 
-      div.work-images
+      div.work-images.hidden-xs
         img.works(src="/images/easi6_work.jpg")
 
     section#members
@@ -235,10 +239,13 @@ block content
     section#contact
       div.contact-container
         ul.contacts
-          li.item.map
+          li.item.map.hidden-xs
             a(href="#")
               img(src="/images/btn_map.png")
               img.hover(src="/images/btn_hover_map.png")
+          li.item.map-mobile.visible-xs-block
+            a(href="https://www.google.co.kr/maps/place/서울특별시+서초구+양재동+290-2/@37.4728786,127.0468984,15z", target="_blank")
+              img(src="/images/btn_map.png")
           li.item.mail
             a(href="mailto:info@easi6.com", target="_top")
               img(src="/images/btn_email.png")
@@ -355,8 +362,7 @@ block content
             .vox-container
               #map_canvas(style="height:340px; width:550px;")
               .address
-                p.address.font-roboto.
-                  33,2nd floor, Nonhyeon-ro 11-gil,Secho-gu,Seoul,Korea,137-895
+                a.address.font-roboto(href="https://www.google.co.kr/maps/place/서울특별시+서초구+양재동+290-2/@37.4728786,127.0468984,15z", target="_blank") 33,2nd floor, Nonhyeon-ro 11-gil,Secho-gu,Seoul,Korea,137-895
     div#easi6-modal.modal.fade
       .modal-dialog
         .modal-content
