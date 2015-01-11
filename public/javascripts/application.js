@@ -13,9 +13,14 @@ $(document).ready(function(){
     $('body').scrollspy({target: '#main-nav'});
   });
 
-  $('img.hover').hover(function(e) {
-    var src = this.src.replace(/\?.*$/,"")+"?x="+Math.random();
-    this.src = src;
+  $('.photo-area').hover(function(e) {
+    var $img = $('img.normal', $(this));
+    var src = $img.attr("src");
+    $img.attr("src", src.replace(/.png$/, ".gif"));
+  }, function(e) {
+    var $img = $('img.normal', $(this));
+    var src = $img.attr("src");
+    $img.attr("src", src.replace(/.gif$/, ".png"));
   });
 
   $('#main-nav').scrollspy();
@@ -50,6 +55,25 @@ $(document).ready(function(){
     $('#map-modal').modal();
     return false;
   });
+
+  // preload images
+  var member_images = [];
+  img = new Image(); img.src = "/images/members/Kay_woo.gif";
+  member_images.push(img);
+  img = new Image(); img.src = "/images/members/jade_han.gif";
+  member_images.push(img);
+  var img = new Image(); img.src = "/images/members/sunny.gif";
+  member_images.push(img);
+  img = new Image(); img.src = "/images/members/Daewon_kim.gif";
+  member_images.push(img);
+  img = new Image(); img.src = "/images/members/taekmin_kim.gif";
+  member_images.push(img);
+  img = new Image(); img.src = "/images/members/Myunkyu_Park.gif";
+  member_images.push(img);
+  img = new Image(); img.src = "/images/members/youngho_suh.gif";
+  member_images.push(img);
+  img = new Image(); img.src = "/images/members/chase.gif";
+  member_images.push(img);
 });
 
 var mapOptions = {
