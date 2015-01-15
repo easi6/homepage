@@ -508,43 +508,17 @@ body {
 #members div.member-container ol.members li.member .container .photo-area img {
   width: 100%;
 }
-#members div.member-container ol.members li.member .container .photo-area .normal {
-  display: block;
-}
-#members div.member-container ol.members li.member .container .photo-area .hover {
-  display: none;
-  animation-play-state: paused;
-  -webkit-animation-play-state: paused;
-}
-#members div.member-container ol.members li.member .container .photo-area:hover .normal {
-  display: none;
-}
-@media (max-width: 767px) {
-  #members div.member-container ol.members li.member .container .photo-area:hover .normal {
-    display: block;
-  }
-}
-#members div.member-container ol.members li.member .container .photo-area:hover .hover {
-  display: block;
-  animation-play-state: paused;
-  -webkit-animation-play-state: paused;
-}
-@media (max-width: 767px) {
-  #members div.member-container ol.members li.member .container .photo-area:hover .hover {
-    display: none;
-  }
-}
-#members div.member-container ol.members li.member .container div.experience {
+#members div.experience {
   height: 138px;
   padding-top: 12px;
 }
-#members div.member-container ol.members li.member .container div.experience ul.experience {
+#members div.experience ul.experience {
   text-align: center;
 }
-#members div.member-container ol.members li.member .container div.experience ul.experience li.item {
+#members div.experience ul.experience li.item {
   margin-top: 18px;
 }
-#members div.member-container ol.members li.member .container div.experience ul.experience li.item p {
+#members div.experience ul.experience li.item p {
   font-size: 15px;
   color: #808080;
 }
@@ -805,7 +779,7 @@ body {
 }
 #modal a.address {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   margin: auto;
   margin-top: 30px;
   text-align: center;
