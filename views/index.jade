@@ -2,25 +2,13 @@ extends layout
 
 block content
 
-  div#nav
-    div.nav-container
-      .nav-content
-        h1
-          a.logo(href="#about")
-            img(src="/images/easi6_logo_white.png")
-        nav#main-nav.navbar.hidden-xs
-          ol.nav.font-replica-bold
-            li
-              a.nav-item(href="#works") SERVICES
-            li
-              a.nav-item(href="#about") ABOUT US
-            li
-              a.nav-item(href="#members") TEAM
-        nav#main-nav-mobile.navbar.visible-xs-block
-          a.toggle-nav.collapsed(data-toggle="collapse", data-target="#collapse-nav")
-            img(src="/images/btn_bar_1.png")
-            img.collapsed(src="/images/btn_bar_3.png")
-          #collapse-nav.collapse.navbar
+    div#nav
+      div.nav-container
+        .nav-content
+          h1
+            a.logo(href="#about")
+              img(src="/images/easi6_logo_white.png")
+          nav#main-nav.navbar.hidden-xs
             ol.nav.font-replica-bold
               li
                 a.nav-item(href="#works") SERVICES
@@ -28,256 +16,275 @@ block content
                 a.nav-item(href="#about") ABOUT US
               li
                 a.nav-item(href="#members") TEAM
-             // li
-             //   a.nav-item(href="http://blog.easi6.com", target="_blank") BLOG
+          nav#main-nav-mobile.navbar.visible-xs-block
+            a.toggle-nav.collapsed(data-toggle="collapse", data-target="#collapse-nav")
+              img(src="/images/btn_bar_1.png")
+              img.collapsed(src="/images/btn_bar_3.png")
+            #collapse-nav.collapse.navbar
+              ol.nav.font-replica-bold
+                li
+                  a.nav-item(href="#works") SERVICES
+                li
+                  a.nav-item(href="#about") ABOUT US
+                li
+                  a.nav-item(href="#members") TEAM
+               // li
+               //   a.nav-item(href="http://blog.easi6.com", target="_blank") BLOG
 
-  div#main-container
+    div#main-container
+      section#news
+        div#banner
+          div.banner-text
+            p.font-roboto Easi6 presents
+            hr
+            h1.font-replica-reg Easiway
+            a.font-roboto(href="#") watch video
+          div.intro-page
+            //img.page-1(src="/images/bg-page-1.jpg")
 
-    section#works
+      section#works
+        div.headline
+          h3.font-replica-reg Services
+          p.font-roboto.lead-custom Easi6 is working on a various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.
+        div.work-container.top-buffer-md
+          .content.hidden-xs
+            ol.works
+              each val in [/*'next, '*/'vox', 'minam', 'tomoni', 'dnd']
+                li.item(class=val)
+                  img(src="/images/btn_work_" + val + ".png")
+                  img.hover(src="images/btn_hover_work_" + val + ".png")
+          .content-mobile.visible-xs-block
+            ol.works
+              //li.work
+                .desc-container.next
+                  .icon-container
+                    img(src="/images/icn_next.png")
+                  .text-container
+                    p.desc.font-roboto
+                      |We are working on a wide range of projects and expanding business in China by connecting online to offline service. We are also planning soon to roll out our first product on kickstarter.<br />
+                      |Stay tuned with us. We post out new exciting projects here.
+              li.work.vox
+                .desc-container.vox
+                  .icon-container
+                    img(src="/images/icn_vox.png")
+                  .text-container
+                    p.desc.font-roboto
+                      |VOX is a unique concept 
+                      |<br />application where you can share
+                      |12-sec recordings of your life story.
+                    p.url.font-roboto
+                      a.vox(href="http://voxstory.com", target="_blank") voxstory.com
+                .image-container.vox
+                  .image-area.vox
+                    img.vox(src="/images/vox1.png")
+                    img.vox(src="/images/vox2.png")
+                    img.vox(src="/images/vox3.png")
+              li.work.minam
+                .desc-container.minam
+                  .icon-container
+                    img(src="/images/icn_minam.png")
+                  .text-container
+                    p.desc.font-roboto.
+                      This application is mean. You can compete with your friends to find out who is the ugliest one.
+                    p.url.font-roboto
+                      a.minam(href="http://minam.easi6.com", target="_blank") minam.easi6.com
+                .image-container.minam
+                  .image-area.minam
+                    img.minam(src="/images/minam.png")
+              li.work.tomoni
+                .desc-container.tomoni
+                  .icon-container
+                    img(src="/images/icn_tomoni.png")
+                  .text-container
+                    p.desc.font-roboto.
+                      Tomoni is an application where you can broadcast and participate in activities near you. Don’t play alone, play together with Tomoni.
+                    p.url.font-roboto
+                      a.tomoni(href="http://tomoniapp.com", target="_blank") tomoniapp.com
+                .image-container.tomoni
+                  .image-area.tomoni
+                    img.tomoni(src="/images/tomoni1.png")
+                    img.tomoni(src="/images/tomoni2.png")
+                    img.tomoni(src="/images/tomoni3.png")
+              li.work.dnd
+                .desc-container.dnd
+                  .icon-container
+                    img(src="/images/icn_dnd.png")
+                  .text-container
+                    p.desc.font-roboto.
+                      The fastest and easiest way to meet your friends is Doors & Dots. 
+                    p.url.font-roboto
+                      a.vox(href="http://doorsndots.com", target="_blank") doorsndots.com
+                .video-container.dnd
+                  .video-area.dnd
+                    iframe(src="//player.vimeo.com/video/72255740", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
 
-      div#intro
-        div#page-1.intro-page
-          img.page-1(src="/images/bg-page-1.jpg")
-      div.headline
-        h2.font-replica-reg Services
-        p.font-roboto.lead-custom Easi6 is working on a various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.
-      div.work-container
-        .content.hidden-xs
-          ol.works
-            each val in ['next', 'vox', 'minam', 'tomoni', 'dnd']
-              li.item(class=val)
-                img(src="/images/btn_work_" + val + ".png")
-                img.hover(src="images/btn_hover_work_" + val + ".png")
-        .content-mobile.visible-xs-block
-          ol.works
-            li.work
-              .desc-container.next
-                .icon-container
-                  img(src="/images/icn_next.png")
-                .text-container
-                  p.desc.font-roboto
-                    |We are working on a wide range of projects and expanding business in China by connecting online to offline service. We are also planning soon to roll out our first product on kickstarter.<br />
-                    |Stay tuned with us. We post out new exciting projects here.
-            li.work.vox
-              .desc-container.vox
-                .icon-container
-                  img(src="/images/icn_vox.png")
-                .text-container
-                  p.desc.font-roboto
-                    |VOX is a unique concept 
-                    |<br />application where you can share
-                    |12-sec recordings of your life story.
-                  p.url.font-roboto
-                    a.vox(href="http://voxstory.com", target="_blank") voxstory.com
-              .image-container.vox
-                .image-area.vox
-                  img.vox(src="/images/vox1.png")
-                  img.vox(src="/images/vox2.png")
-                  img.vox(src="/images/vox3.png")
-            li.work.minam
-              .desc-container.minam
-                .icon-container
-                  img(src="/images/icn_minam.png")
-                .text-container
-                  p.desc.font-roboto.
-                    This application is mean. You can compete with your friends to find out who is the ugliest one.
-                  p.url.font-roboto
-                    a.minam(href="http://minam.easi6.com", target="_blank") minam.easi6.com
-              .image-container.minam
-                .image-area.minam
-                  img.minam(src="/images/minam.png")
-            li.work.tomoni
-              .desc-container.tomoni
-                .icon-container
-                  img(src="/images/icn_tomoni.png")
-                .text-container
-                  p.desc.font-roboto.
-                    Tomoni is an application where you can broadcast and participate in activities near you. Don’t play alone, play together with Tomoni.
-                  p.url.font-roboto
-                    a.tomoni(href="http://tomoniapp.com", target="_blank") tomoniapp.com
-              .image-container.tomoni
-                .image-area.tomoni
-                  img.tomoni(src="/images/tomoni1.png")
-                  img.tomoni(src="/images/tomoni2.png")
-                  img.tomoni(src="/images/tomoni3.png")
-            li.work.dnd
-              .desc-container.dnd
-                .icon-container
-                  img(src="/images/icn_dnd.png")
-                .text-container
-                  p.desc.font-roboto.
-                    The fastest and easiest way to meet your friends is Doors & Dots. 
-                  p.url.font-roboto
-                    a.vox(href="http://doorsndots.com", target="_blank") doorsndots.com
-              .video-container.dnd
-                .video-area.dnd
-                  iframe(src="//player.vimeo.com/video/72255740", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
-
-      //div.work-images.hidden-xs
-        img.works(src="/images/easi6_work.jpg")
+        //div.work-images.hidden-xs
+          img.works(src="/images/easi6_work.jpg")
 
 
-    section#about
-      div.headline
-        h2.font-replica-reg About Us
-        p.font-roboto.lead-custom Easi6 is working on a various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.
-      div#intro.top-buffer-md
-        div#page-1.intro-page
-          img.page-1(src="/images/bg-page-1.jpg")
-          .page-title
-            img.title-1(src="/images/sentence1.png")
-        div#page-2.intro-page
-          img.page-2(src="/images/bg-page-2.jpg")
-          .page-title
-            img.title-2(src="/images/sentence2.png")
-        div#page-3.intro-page
-          img.page-3(src="/images/bg-page-3.jpg")
-          .page-title
-            img.title-3(src="/images/sentence3.png")
-        div#page-4.intro-page
-          img.page-4(src="/images/bg-page-4.jpg")
-          .page-title
-            img.title-4(src="/images/sentence4.png")
-      div#description
-        p.desc.font-replica-reg
-          q To make people easy.
-        div.logo 
-          img.logo(src="/images/easi6_logo_green.png")
+      section#about
+        div.headline
+          h3.font-replica-reg About Us
+          //p.font-roboto.lead-custom Easi6 is working on a various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.
+        div#intro.top-buffer-md
+          div#page-1.intro-page
+            img.page-1(src="/images/easi6_image1.png")
+            .page-title
+              img.title-1(src="/images/easi6_type1.png")
+          div#page-2.intro-page
+            img.page-2(src="/images/easi6_image2.png")
+            .page-title
+              img.title-2(src="/images/easi6_type2.png")
+          div#page-3.intro-page
+            img.page-3(src="/images/easi6_image3.png")
+            .page-title
+              img.title-3(src="/images/easi6_type3.png")
+          //div#page-4.intro-page
+            img.page-4(src="/images/bg-page-4.jpg")
+            .page-title
+              img.title-4(src="/images/sentence4.png")
+    
+      section#members
+        div.headline
+          h3.font-replica-reg Team
+          //p.font-roboto.lead-custom Interested in working with us? Shoot an email to work@easi6.com!
+        div.member-container
+          ol.members
+            li.member.kay
+              .container
+                div.name-area.font-replica-reg
+                  h5.name Kyeongsik Kay Woo  &nbsp;| &nbsp;우경식
+                  h6.position Chief Executive Officer
+                div.photo-area
+                  img.normal(src="/images/members/Kay_woo.png")
+                  //-img.hover(src="/images/members/Kay_woo.gif")
+                div.experience
+                  ul.experience
+                    li.item
+                      p.font-roboto Columbia University MS Financial Math/STAT
+                    li.item
+                      p.font-roboto Seoul National University / E.Engineering
+            li.member.jade
+              .container
+                div.name-area.font-replica-reg
+                  h5.name Jade Han &nbsp;| &nbsp;한광수
+                  h6.position Lead Engineer
+                div.photo-area
+                  img.normal(src="/images/members/jade_han.png")
+                  //-img.hover(src="/images/members/jade_han.gif")
+                div.experience
+                  ul.experience
+                    li.item
+                      p.font-roboto Seoul Nat'l University / Computer Science MS
+            li.member.sunny
+              .container
+                div.name-area.font-replica-reg
+                  h5.name Kyungsun Sunny Hong &nbsp;| &nbsp;홍경선
+                  h6.position Partner / Lead Designer
+                div.photo-area
+                  img.normal(src="/images/members/sunny.png")
+                  //-img.hover(src="/images/members/sunny.gif")
+                div.experience
+                  ul.experience
+                    li.item
+                      p.font-roboto School of Visual Arts / Graphic Design
+                    li.item
+                      p.font-roboto Worked at Landor Associates in NY
+            li.member.daewon
+              .container
+                div.name-area.font-replica-reg
+                  h5.name Daewon Kim &nbsp;| &nbsp;김대원
+                  h6.position Developer
+                div.photo-area
+                  img.normal(src="/images/members/Daewon_kim.png")
+                  //-img.hover(src="/images/members/Daewon_kim.gif")
+                div.experience
+                  ul.experience
+                    li.item
+                      p.font-roboto Seoul National University / E.Engineering MS
+                    li.item
+                      p.font-roboto Seoul National University / Dentistry MS
+            li.member.box
+              .container
+                div.name-area.font-replica-reg
+                  h5.name Box Kim &nbsp;| &nbsp;김봉투
+                  h6.position Developer
+                div.photo-area
+                  img.normal(src="/images/members/taekmin_kim.png")
+                  //-img.hover(src="/images/members/taekmin_kim.gif")
+                div.experience
+                  ul.experience
+                    li.item
+                      p.font-roboto Seoul National University / Computer Science
+            li.member.myunkyu
+              .container
+                div.name-area.font-replica-reg
+                  h5.name Myunkyu Park &nbsp;| &nbsp;박면규 
+                  h6.position Developer
+                div.photo-area
+                  img.normal(src="/images/members/Myunkyu_Park.png")
+                  //-img.hover(src="/images/members/Myunkyu_Park.gif")
+                div.experience
+                  ul.experience
+                    li.item
+                      p.font-roboto Seoul National University / Computer Science
+            //-li.member.youngho
+              .container
+                div.name-area.font-replica-reg
+                  h5.name Young-Manse &nbsp;| &nbsp;영만세
+                  h6.position Business Advisor
+                div.photo-area
+                  img.normal(src="/images/members/youngho_suh.png")
+                  //-img.hover(src="/images/members/youngho_suh.gif")
+                div.experience
+                  ul.experience
+                    li.item
+                      p.font-roboto Business Advisor
+            li.member.chase
+              .container
+                div.name-area.font-replica-reg
+                  h5.name Chase &nbsp;| &nbsp;체이스
+                  h6.position Chief Dog
+                div.photo-area
+                  img.normal(src="/images/members/chase.png")
+                  //-img.hover(src="/images/members/chase.gif")
+                div.experience
+                  ul.experience
+                    li.item
+                      p.font-roboto Love chasing stranger's smell
 
-    section#members
-      div.member-container
-        ol.members
-          li.member.kay
-            .container
-              div.name-area.font-replica-reg
-                h5.name Kyeongsik Kay Woo  &nbsp;| &nbsp;우경식
-                h6.position Chief Executive Officer
-              div.photo-area
-                img.normal(src="/images/members/Kay_woo.png")
-                //-img.hover(src="/images/members/Kay_woo.gif")
-              div.experience
-                ul.experience
-                  li.item
-                    p.font-roboto Columbia University MS Financial Math/STAT
-                  li.item
-                    p.font-roboto Seoul National University / E.Engineering
-          li.member.jade
-            .container
-              div.name-area.font-replica-reg
-                h5.name Jade Han &nbsp;| &nbsp;한광수
-                h6.position Lead Engineer
-              div.photo-area
-                img.normal(src="/images/members/jade_han.png")
-                //-img.hover(src="/images/members/jade_han.gif")
-              div.experience
-                ul.experience
-                  li.item
-                    p.font-roboto Seoul Nat'l University / Computer Science MS
-          li.member.sunny
-            .container
-              div.name-area.font-replica-reg
-                h5.name Kyungsun Sunny Hong &nbsp;| &nbsp;홍경선
-                h6.position Partner / Lead Designer
-              div.photo-area
-                img.normal(src="/images/members/sunny.png")
-                //-img.hover(src="/images/members/sunny.gif")
-              div.experience
-                ul.experience
-                  li.item
-                    p.font-roboto School of Visual Arts / Graphic Design
-                  li.item
-                    p.font-roboto Worked at Landor Associates in NY
-          li.member.daewon
-            .container
-              div.name-area.font-replica-reg
-                h5.name Daewon Kim &nbsp;| &nbsp;김대원
-                h6.position Developer
-              div.photo-area
-                img.normal(src="/images/members/Daewon_kim.png")
-                //-img.hover(src="/images/members/Daewon_kim.gif")
-              div.experience
-                ul.experience
-                  li.item
-                    p.font-roboto Seoul National University / E.Engineering MS
-                  li.item
-                    p.font-roboto Seoul National University / Dentistry MS
-          li.member.box
-            .container
-              div.name-area.font-replica-reg
-                h5.name Box Kim &nbsp;| &nbsp;김봉투
-                h6.position Developer
-              div.photo-area
-                img.normal(src="/images/members/taekmin_kim.png")
-                //-img.hover(src="/images/members/taekmin_kim.gif")
-              div.experience
-                ul.experience
-                  li.item
-                    p.font-roboto Seoul National University / Computer Science
-          li.member.myunkyu
-            .container
-              div.name-area.font-replica-reg
-                h5.name Myunkyu Park &nbsp;| &nbsp;박면규 
-                h6.position Developer
-              div.photo-area
-                img.normal(src="/images/members/Myunkyu_Park.png")
-                //-img.hover(src="/images/members/Myunkyu_Park.gif")
-              div.experience
-                ul.experience
-                  li.item
-                    p.font-roboto Seoul National University / Computer Science
-          //-li.member.youngho
-            .container
-              div.name-area.font-replica-reg
-                h5.name Young-Manse &nbsp;| &nbsp;영만세
-                h6.position Business Advisor
-              div.photo-area
-                img.normal(src="/images/members/youngho_suh.png")
-                //-img.hover(src="/images/members/youngho_suh.gif")
-              div.experience
-                ul.experience
-                  li.item
-                    p.font-roboto Business Advisor
-          li.member.chase
-            .container
-              div.name-area.font-replica-reg
-                h5.name Chase &nbsp;| &nbsp;체이스
-                h6.position Chief Dog
-              div.photo-area
-                img.normal(src="/images/members/chase.png")
-                //-img.hover(src="/images/members/chase.gif")
-              div.experience
-                ul.experience
-                  li.item
-                    p.font-roboto Love chasing stranger's smell
-
-    section#contact
-      div.contact-container
-        ul.contacts
-          li.item.map.hidden-xs
-            a(href="#")
-              img(src="/images/btn_map.png")
-              img.hover(src="/images/btn_hover_map.png")
-          li.item.map-mobile.visible-xs-block
-            a(href="https://www.google.co.kr/maps/place/서울특별시+서초구+양재동+290-2/@37.4728786,127.0468984,15z", target="_blank")
-              img(src="/images/btn_map.png")
-          li.item.mail
-            a(href="mailto:info@easi6.com", target="_top")
-              img(src="/images/btn_email.png")
-              img.hover(src="/images/btn_hover_email.png")
-          li.item.facebook
-            a(href="https://facebook.com/easi6", target="_blank")
-              img(src="/images/btn_facebook.png")
-              img.hover(src="/images/btn_hover_facebook.png")
-          li.item.twitter
-            a(href="https://twitter.com/easi6", target="_blank")
-              img(src="/images/btn_twitter.png")
-              img.hover(src="/images/btn_hover_twitter.png")
-          li.item.blog
-            a(href="http://blog.easi6.com", target="_blank")
-              img(src="/images/btn_blog.png")
-              img.hover(src="/images/btn_hover_blog.png")
-      div.footer
-        p.desc.font-roboto 2015 easi6 Inc. All Rights Reserved
+      section#footer
+        div.footer
+          div.info
+              img.logo(src="/images/easi6_logo_green.png")
+              p.font-replica-reg To make people easy.
+              p.desc.font-roboto 2015 easi6 Inc. All Rights Reserved
+          div#contact
+            div.contact-container
+              ul.contacts
+                li.item.map.hidden-xs
+                  a(href="#")
+                    img(src="/images/btn_map.png")
+                    img.hover(src="/images/btn_hover_map.png")
+                li.item.map-mobile.visible-xs-block
+                  a(href="https://www.google.co.kr/maps/place/서울특별시+서초구+양재동+290-2/@37.4728786,127.0468984,15z", target="_blank")
+                    img(src="/images/btn_map.png")
+                li.item.mail
+                  a(href="mailto:info@easi6.com", target="_top")
+                    img(src="/images/btn_email.png")
+                    img.hover(src="/images/btn_hover_email.png")
+                li.item.facebook
+                  a(href="https://facebook.com/easi6", target="_blank")
+                    img(src="/images/btn_facebook.png")
+                    img.hover(src="/images/btn_hover_facebook.png")
+                li.item.twitter
+                  a(href="https://twitter.com/easi6", target="_blank")
+                    img(src="/images/btn_twitter.png")
+                    img.hover(src="/images/btn_hover_twitter.png")
+                li.item.blog
+                  a(href="http://blog.easi6.com", target="_blank")
+                    img(src="/images/btn_blog.png")
+                    img.hover(src="/images/btn_hover_blog.png")
 
   section#modal
     div#vox-modal.modal.fade
