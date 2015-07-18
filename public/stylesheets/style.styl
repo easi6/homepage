@@ -321,10 +321,10 @@ h6
         ol
           &.works
             //padding-top 9.6%
-            width 94%
+            width 100%
             max-width 900px
-            margin auto
-            margin-bottom 3.3%
+            //margin auto
+            //margin-bottom 3.3%
             float left
             left 50%
             transform translate(-50%, 0)
@@ -333,13 +333,17 @@ h6
             position relative
             li
               &.item
-                width 14.5%
-                max-width 140px
+                position relative
+                width 24%//14.5%
+                //max-width 140px
                 float left
-                margin-left 5.5%
+                //margin-left 0%//5.5%
                 cursor pointer
                 img
+                  display block
                   width 100%
+                  max-width 140px
+                  margin 0 auto
                   &.hover
                     display none
               &:hover
@@ -347,10 +351,10 @@ h6
                   display none
                   &.hover
                     display block
-              &:first-child
-                margin-left: 2.75%
-              &:last-child
-                margin-right: 2.75%
+              //&:first-child
+                //margin-left: 2.75%
+              //&:last-child
+                //margin-right: 2.75%
       .content-mobile
         width 84.375%
         margin auto
@@ -557,6 +561,9 @@ h6
     float left
     .info
       width 40%
+      @media (max-width: 767px)
+        width 100%
+        text-align center
       float left
       left 5%
       p
@@ -569,6 +576,8 @@ h6
         color #808080
     #contact
       width 60%
+      @media (max-width: 767px)
+        width 100%
       float right
       //height 100%
       //width 100%
