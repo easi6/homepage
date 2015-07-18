@@ -11,9 +11,9 @@ block content
         nav#main-nav.navbar.hidden-xs
           ol.nav.font-replica-bold
             li
-              a.nav-item(href="#about") ABOUT US
+              a.nav-item(href="#works") SERVICES
             li
-              a.nav-item(href="#works") WORKS
+              a.nav-item(href="#about") ABOUT US
             li
               a.nav-item(href="#members") TEAM
         nav#main-nav-mobile.navbar.visible-xs-block
@@ -23,39 +23,24 @@ block content
           #collapse-nav.collapse.navbar
             ol.nav.font-replica-bold
               li
+                a.nav-item(href="#works") SERVICES
+              li
                 a.nav-item(href="#about") ABOUT US
               li
-                a.nav-item(href="#works") WORKS
-              li
                 a.nav-item(href="#members") TEAM
-              //li
-              //  a.nav-item(href="http://blog.easi6.com", target="_blank") BLOG
+             // li
+             //   a.nav-item(href="http://blog.easi6.com", target="_blank") BLOG
 
   div#main-container
-    section#about
+
+    section#works
+
       div#intro
         div#page-1.intro-page
           img.page-1(src="/images/bg-page-1.jpg")
-          .page-title
-            img.title-1(src="/images/sentence1.png")
-        div#page-2.intro-page
-          img.page-2(src="/images/bg-page-2.jpg")
-          .page-title
-            img.title-2(src="/images/sentence2.png")
-        div#page-3.intro-page
-          img.page-3(src="/images/bg-page-3.jpg")
-          .page-title
-            img.title-3(src="/images/sentence3.png")
-        div#page-4.intro-page
-          img.page-4(src="/images/bg-page-4.jpg")
-          .page-title
-            img.title-4(src="/images/sentence4.png")
-      div#description
-        p.desc.font-replica-reg
-          q "To make people easy"
-        div.logo 
-          img.logo(src="/images/easi6_logo_green.png")
-    section#works
+      div.headline
+        h2.font-replica-reg Services
+        p.font-roboto.lead-custom Easi6 is working on a various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.
       div.work-container
         .content.hidden-xs
           ol.works
@@ -128,8 +113,36 @@ block content
                 .video-area.dnd
                   iframe(src="//player.vimeo.com/video/72255740", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
 
-      div.work-images.hidden-xs
+      //div.work-images.hidden-xs
         img.works(src="/images/easi6_work.jpg")
+
+
+    section#about
+      div.headline
+        h2.font-replica-reg About Us
+        p.font-roboto.lead-custom Easi6 is working on a various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.
+      div#intro.top-buffer-md
+        div#page-1.intro-page
+          img.page-1(src="/images/bg-page-1.jpg")
+          .page-title
+            img.title-1(src="/images/sentence1.png")
+        div#page-2.intro-page
+          img.page-2(src="/images/bg-page-2.jpg")
+          .page-title
+            img.title-2(src="/images/sentence2.png")
+        div#page-3.intro-page
+          img.page-3(src="/images/bg-page-3.jpg")
+          .page-title
+            img.title-3(src="/images/sentence3.png")
+        div#page-4.intro-page
+          img.page-4(src="/images/bg-page-4.jpg")
+          .page-title
+            img.title-4(src="/images/sentence4.png")
+      div#description
+        p.desc.font-replica-reg
+          q To make people easy.
+        div.logo 
+          img.logo(src="/images/easi6_logo_green.png")
 
     section#members
       div.member-container
