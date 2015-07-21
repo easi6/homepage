@@ -903,6 +903,27 @@ h6 {
     margin-left: 2.5%;
   }
 }
+#modal #easiway-modal .screenshot-area.easiway {
+  margin-left: 4.4%;
+  margin-top: 7%;
+}
+@media (max-width: 750px) {
+  #modal #easiway-modal .screenshot-area.easiway {
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+  }
+}
+#modal #easiway-modal .screenshot-area.easiway img.easiway {
+  width: 30%;
+  margin-left: 8px;
+}
+@media (max-width: 750px) {
+  #modal #easiway-modal .screenshot-area.easiway img.easiway {
+    width: 30%;
+    margin-left: 2.5%;
+  }
+}
 #modal #minam-modal .screenshot-area {
   margin-left: 33px;
   margin-top: 38px;
