@@ -634,15 +634,7 @@ h6 {
   float: left;
 }
 .footer .info {
-  width: 40%;
-  float: left;
-  left: 5%;
-}
-@media (max-width: 767px) {
-  .footer .info {
-    width: 100%;
-    text-align: center;
-  }
+  width: 100%;
 }
 .footer .info p {
   display: block;
@@ -654,15 +646,10 @@ h6 {
   font-size: 12px;
   margin-bottom: 25px;
   color: #808080;
+  text-align: center;
 }
 .footer #contact {
-  width: 60%;
-  float: right;
-}
-@media (max-width: 767px) {
-  .footer #contact {
-    width: 100%;
-  }
+  width: 100%;
 }
 .footer #contact div.contact-container {
   height: 101px;
