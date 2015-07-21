@@ -33,6 +33,9 @@ block content
 
     div#main-container
       section#news
+        video#bgvid(autoplay loop poster="/images/polina.jpg")
+            source(src="/images/polina.webm", type="video/webm")
+            source(src="/images/polina.mp4", type="video/mp4")
         div#banner
           div.banner-text
             p.font-roboto Easi6 presents
@@ -49,10 +52,10 @@ block content
         div.work-container.top-buffer-md
           .content.hidden-xs
             ol.works
-              each val in [/*'next', */'vox', 'minam', 'tomoni', 'dnd']
+              each val in [/*'next', */'easiway', 'vox', 'tomoni', 'dnd']
                 li.item(class=val)
-                  img(src="/images/btn_work_" + val + ".png")
-                  img.hover(src="images/btn_hover_work_" + val + ".png")
+                  img(src="/images/works/" + val + ".png")
+                  img.hover(src="/images/works/" + val + ".png")
           .content-mobile.visible-xs-block
             ol.works
               //li.work
@@ -125,7 +128,7 @@ block content
       section#about
         div.headline
           h3.font-replica-reg About Us
-          //p.font-roboto.lead-custom Easi6 is working on a various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.
+          p.font-roboto.lead-custom We're a really awesome company.
         div#intro.top-buffer-md
           div#page-1.intro-page
             img.page-1(src="/images/easi6_image1.png")
@@ -286,119 +289,119 @@ block content
                     img(src="/images/btn_blog.png")
                     img.hover(src="/images/btn_hover_blog.png")
 
-  section#modal
-    div#vox-modal.modal.fade
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal", aria-label="Close")
-          .modal-body
-            .vox-container
-              .screenshot-container
-                .screenshot-area.vox
-                  img.vox(src="/images/vox1.png")
-                  img.vox(src="/images/vox2.png")
-                  img.vox(src="/images/vox3.png")
-              .description-container
-                .description-area.font-roboto
-                  .name-area
-                    h3.name VOX
-                  .desc-area 
-                    p.desc.
-                      VOX is an unique concept
-                      <br />application that you can share your
-                      <br />12 second life story
-                  .homepage-area
-                    p.url
-                      a.vox(href="http://voxstory.com", target="_blank") voxstory.com
-    div#minam-modal.modal.fade
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal", aria-label="Close")
-          .modal-body
-            .vox-container
-              .screenshot-container
-                .screenshot-area.minam
-                  img.minam(src="/images/minam.png")
-              .description-container
-                .description-area.font-roboto
-                  .name-area
-                    h3.name You look gorgeous
-                  .desc-area 
-                    p.desc.
-                      This is a 'mean' application that you can compete with your friends.<br /> You can find out who is the most ugliest one.
-                  .homepage-area
-                    p.url
-                      a.minam(href="http://minam.easi6.com", target="_blank") minam.easi6.com
-    div#tomoni-modal.modal.fade
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal", aria-label="Close")
-          .modal-body
-            .vox-container
-              .screenshot-container
-                .screenshot-area.tomoni
-                  img.tomoni(src="/images/tomoni1.png")
-                  img.tomoni(src="/images/tomoni2.png")
-                  img.tomoni(src="/images/tomoni3.png")
-              .description-container
-                .description-area.font-roboto
-                  .name-area
-                    h3.name Tomoni
-                  .desc-area 
-                    p.desc.
-                      Tomoni is an application that you can broadcast or participate activities near you. <br /> <br />
-                      Don't play alone, play together with Tomoni.
-                  .homepage-area
-                    p.url
-                      a.tomoni(href="http://tomoniapp.com", target="_blank") tomoniapp.com
-    div#dnd-modal.modal.fade
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal", aria-label="Close")
-          .modal-body
-            .vox-container
-              .screenshot-container
-                .screenshot-area.dnd
-                  iframe(src="//player.vimeo.com/video/72255740", width="580", height="333", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
-              .description-container
-                .description-area.font-roboto
-                  .name-area
-                    h3.name Doors&Dots
-                  .desc-area 
-                    p.desc.
-                      The Fast and Easy Way to Meet Your Friends, it is Doors & Dots.
-                  .homepage-area
-                    p.url
-                      a.vox(href="http://doorsndots.com", target="_blank") doorsndots.com
-    div#map-modal.modal.fade
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal", aria-label="Close")
-          .modal-body
-            .vox-container
-              #map_canvas(style="height:340px; width:550px;")
-              .address
-                a.address.font-roboto(href="https://www.google.co.kr/maps/place/서울특별시+서초구+양재동+290-2/@37.4728786,127.0468984,15z", target="_blank") 33, 2nd floor, Nonhyeon-ro 11-gil, Secho-gu,Seoul, Korea, 137-895
-    div#easi6-modal.modal.fade
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal", aria-label="Close")
-          .modal-body
-            .vox-container
-              .screenshot-container
-                .screenshot-area
-                  img(src="/images/meeting.jpg")
-              .description-container
-                .description-area.font-roboto
-                  .name-area.no-name
-                    img.logo(src="/images/easi6_logo_green.png")
-                  .desc-area.no-name
-                    p.desc.
-                      Now we are working on the various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.<br /> <br />
-                      Stay tuned with us. We keep posting our new exciting projects here.
+    section#modal
+      div#easiway-modal.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+            .modal-body
+              .vox-container
+                .screenshot-container
+                  .screenshot-area.minam
+                    img.minam(src="/images/minam.png")
+                .description-container
+                  .description-area.font-roboto
+                    .name-area
+                      h3.name You look gorgeous
+                    .desc-area 
+                      p.desc.
+                        This is a 'mean' application that you can compete with your friends.<br /> You can find out who is the most ugliest one.
+                    .homepage-area
+                      p.url
+                        a.minam(href="http://minam.easi6.com", target="_blank") minam.easi6.com
+      div#vox-modal.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+            .modal-body
+              .vox-container
+                .screenshot-container
+                  .screenshot-area.vox
+                    img.vox(src="/images/vox1.png")
+                    img.vox(src="/images/vox2.png")
+                    img.vox(src="/images/vox3.png")
+                .description-container
+                  .description-area.font-roboto
+                    .name-area
+                      h3.name VOX
+                    .desc-area 
+                      p.desc.
+                        VOX is an unique concept
+                        <br />application that you can share your
+                        <br />12 second life story
+                    .homepage-area
+                      p.url
+                        a.vox(href="http://voxstory.com", target="_blank") voxstory.com
+      div#tomoni-modal.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+            .modal-body
+              .vox-container
+                .screenshot-container
+                  .screenshot-area.tomoni
+                    img.tomoni(src="/images/tomoni1.png")
+                    img.tomoni(src="/images/tomoni2.png")
+                    img.tomoni(src="/images/tomoni3.png")
+                .description-container
+                  .description-area.font-roboto
+                    .name-area
+                      h3.name Tomoni
+                    .desc-area 
+                      p.desc.
+                        Tomoni is an application that you can broadcast or participate activities near you. <br /> <br />
+                        Don't play alone, play together with Tomoni.
+                    .homepage-area
+                      p.url
+                        a.tomoni(href="http://tomoniapp.com", target="_blank") tomoniapp.com
+      div#dnd-modal.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+            .modal-body
+              .vox-container
+                .screenshot-container
+                  .screenshot-area.dnd
+                    iframe(src="//player.vimeo.com/video/72255740", width="580", height="333", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+                .description-container
+                  .description-area.font-roboto
+                    .name-area
+                      h3.name Doors&Dots
+                    .desc-area 
+                      p.desc.
+                        The Fast and Easy Way to Meet Your Friends, it is Doors & Dots.
+                    .homepage-area
+                      p.url
+                        a.vox(href="http://doorsndots.com", target="_blank") doorsndots.com
+      div#map-modal.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+            .modal-body
+              .vox-container
+                #map_canvas(style="height:340px; width:550px;")
+                .address
+                  a.address.font-roboto(href="https://www.google.co.kr/maps/place/서울특별시+서초구+양재동+290-2/@37.4728786,127.0468984,15z", target="_blank") 33, 2nd floor, Nonhyeon-ro 11-gil, Secho-gu,Seoul, Korea, 137-895
+      div#easi6-modal.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+            .modal-body
+              .vox-container
+                .screenshot-container
+                  .screenshot-area
+                    img(src="/images/meeting.jpg")
+                .description-container
+                  .description-area.font-roboto
+                    .name-area.no-name
+                      img.logo(src="/images/easi6_logo_green.png")
+                    .desc-area.no-name
+                      p.desc.
+                        Now we are working on the various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.<br /> <br />
+                        Stay tuned with us. We keep posting our new exciting projects here.

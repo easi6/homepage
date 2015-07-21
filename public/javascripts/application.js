@@ -26,16 +26,16 @@ $(document).ready(function(){
   $('#main-nav').scrollspy();
   $('#main-nav-mobile').scrollspy();
 
-  $('li.item.next').click(function(e) {
+  /*$('li.item.next').click(function(e) {
     $('#easi6-modal').modal();
+  });*/
+
+  $('li.item.easiway').click(function(e) {
+    $('#easiway-modal').modal();
   });
 
   $('li.item.vox').click(function(e) {
     $('#vox-modal').modal();
-  });
-
-  $('li.item.minam').click(function(e) {
-    $('#minam-modal').modal();
   });
 
   $('li.item.tomoni').click(function(e) {
