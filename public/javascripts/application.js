@@ -74,6 +74,12 @@ $(document).ready(function(){
   member_images.push(img);
   img = new Image(); img.src = "/images/members/chase.gif";
   member_images.push(img);
+  img = new Image(); img.src = "/images/members/ben.gif";
+  member_images.push(img);
+  img = new Image(); img.src = "/images/members/euna.gif";
+  member_images.push(img);
+  img = new Image(); img.src = "/images/members/derek.gif";
+  member_images.push(img);
 });
 
 var mapOptions = {
