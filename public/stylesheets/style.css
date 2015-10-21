@@ -265,6 +265,30 @@ h6 {
   width: 100%;
   height: auto;
 }
+#news .easiway-container {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 310px;
+}
+#news .easiway-container .logobox {
+  margin: 0 auto;
+  width: 150px;
+  padding: 15px;
+  padding-bottom: 12px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+#news .easiway-container .logobox:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+#news .easiway-container .easiway-corp {
+  float: right;
+}
+#news .easiway-container .easiway-box {
+  float: left;
+}
 #news {
   width: 100%;
   position: relative;
