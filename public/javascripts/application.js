@@ -92,7 +92,7 @@ function loadMap()
 {
   var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
   var geocoder = new google.maps.Geocoder();
-  var address = "서울특별시 서초구 양재2동 290-2";
+  var address = "UNIT 2302, 23/F NEW WORLD TOWER 1 18 QUEEN'S ROAD CENTRAL, CENTRAL HONG KONG";
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);

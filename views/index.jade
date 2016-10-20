@@ -14,21 +14,21 @@ block content
                 a.nav-item(href="#news") SERVICES
               li
                 a.nav-item(href="#about") ABOUT US
-              li
-                a.nav-item(href="#members") TEAM
+              //li
+              //  a.nav-item(href="#members") TEAM
               li
                 a.nav-item.cs SUPPORT
                   div.cs-detail
-                    //- p
-                    //-   | 中文 / 한국어(中国地区拨打)<br>
-                    //-   span.number 
-                    //-     | 400 050 9291 <br>
-                    //- hr
-                    //- p
-                    //-   | English / 한국어 <br> 
-                    //-   span.number 
-                    //-     | +82 70 7718 2605
-                    //- hr
+                    p
+                      | 中文 / 한국어(中国地区拨打)<br>
+                      span.number 
+                        | 400 050 9291 <br>
+                    hr
+                    p
+                      | English / 한국어 <br> 
+                      span.number 
+                        | +82 70 7718 2605
+                    hr
                     p
                       | support@easi-way.com
 
@@ -42,9 +42,10 @@ block content
                   a.nav-item(href="#news") SERVICES
                 li
                   a.nav-item(href="#about") ABOUT US
+               //
                 li
                   a.nav-item(href="#members") TEAM
-               // li
+                li
                   a.nav-item(href="http://blog.easi6.com", target="_blank") BLOG
 
     div#main-container
@@ -63,7 +64,7 @@ block content
             div.easiway-container
               div.logobox.easiway-corp
                 a(href="http://corp.easi-way.com/")
-                  img(src="images/easiway-corp-line-whitelogo.png" height="40")
+                  img(src="images/easiway-corp-line-whitelogo2.png" height="40")
 
               div.logobox.easiway-box
                 a(href="http://easi-way.com")
@@ -176,7 +177,7 @@ block content
             .page-title
               img.title-4(src="/images/sentence4.png")
     
-      section#members
+      //section#members
         div.headline
           h3.font-replica-reg Team
           //p.font-roboto.lead-custom Interested in working with us? Shoot an email to work@easi6.com!
@@ -328,22 +329,22 @@ block content
           div#contact
             div.contact-container
               ul.contacts
-                li.item.map.hidden-xs
+                li.item.map.hidden-xs(style="margin-left: 23%;")
                   a(href="#")
                     img(src="/images/btn_map.png")
                     img.hover(src="/images/btn_hover_map.png")
                 li.item.map-mobile.visible-xs-block
-                  a(href="https://www.google.co.kr/maps/place/서울특별시+서초구+양재동+290-2/@37.4728786,127.0468984,15z", target="_blank")
+                  a(href="https://www.google.co.kr/maps/place/Trade+Capital/@22.2805019,114.1553483,17z", target="_blank")
                     img(src="/images/btn_map.png")
                 li.item.mail
                   a(href="mailto:info@easi6.com", target="_top")
                     img(src="/images/btn_email.png")
                     img.hover(src="/images/btn_hover_email.png")
-                li.item.facebook
+                //li.item.facebook
                   a(href="https://facebook.com/easi6", target="_blank")
                     img(src="/images/btn_facebook.png")
                     img.hover(src="/images/btn_hover_facebook.png")
-                li.item.twitter
+                //li.item.twitter
                   a(href="https://twitter.com/easi6", target="_blank")
                     img(src="/images/btn_twitter.png")
                     img.hover(src="/images/btn_hover_twitter.png")
@@ -354,7 +355,7 @@ block content
             div.info
               //img.logo(src="/images/easi6_logo_green.png")
               //p.font-replica-reg To make people easy.
-              p.desc.font-roboto 2015 easi6 Inc. All Rights Reserved
+              p.desc.font-roboto 2016 easi6 Inc. All Rights Reserved
     section#modal
       div#easiway-modal.modal.fade
         .modal-dialog
@@ -454,10 +455,8 @@ block content
               .vox-container
                 #map_canvas(style="height:340px; width:550px;")
                 .address
-                  a.address.font-roboto(href="https://www.google.co.kr/maps/place/서울특별시+서초구+양재동+290-2/@37.4728786,127.0468984,15z", target="_blank") 
-                    | 33, 2nd floor, Nonhyeon-ro 11-gil, Seocho-gu,Seoul, Korea, 137-895
-                    br
-                    | 서울시 서초구 논현로 11길 33 (구: 양재동 290-2)  예림빌딩 2층
+                  a.address.font-roboto(href="https://www.google.co.kr/maps/place/Trade+Capital/@22.2805019,114.1553483,17z", target="_blank") 
+                    | UNIT 2302, 23/F NEW WORLD TOWER 1 18 QUEEN'S ROAD CENTRAL, CENTRAL HONG KONG
       div#easi6-modal.modal.fade
         .modal-dialog
           .modal-content
