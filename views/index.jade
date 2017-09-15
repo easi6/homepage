@@ -8,6 +8,7 @@ block content
           h1
             a.logo(href="#news")
               img(src="/images/easi6_logo_white.png")
+        //-
           nav#main-nav.navbar.hidden-xs
             ol.nav.font-replica-bold
               li
@@ -56,24 +57,25 @@ block content
         div.poster
         div#banner
           div.banner-text
-            p.font-roboto Easi6 presents
-            hr
-            h1.font-replica-reg Easiway
-            //a.font-roboto(href="http://easi-way.com") see service website
+            //-p.font-roboto Easi6 presents
+            //-hr
+            h1.font-replica-reg easi6
+            div.font-roboto(style="color: #fff; font-size: 18px;") Get chauffeured rides in Taiwan
 
             div.easiway-container
-              div.logobox.easiway-corp
-                a(href="http://corp.easi-way.com/")
-                  img(src="images/easiway-corp-line-whitelogo2.png" height="40")
-
               div.logobox.easiway-box
                 a(href="http://easi-way.com")
-                  img(src="images/easiway-white-logo.png" height="40")
-
+                  img(src="images/ios@2x.png")
+              div.logobox.easiway-box
+                a(href="http://corp.easi-way.com/")
+                  img(src="images/google@2x.png")
+              div.logobox.easiway-box
+                a(href="https://book.easi6.com/" style="line-height: 38px")
+                  span.btn-text Book now
           div.intro-page
-            //img.page-1(src="/images/bg-page-1.jpg")
+            //-img.page-1(src="/images/bg-page-1.jpg")
 
-      section#works
+      //-section#works
         div.headline
           h3.font-replica-reg Services
           p.font-roboto.lead-custom Easi6 is working on a various range of projects such as a new business expansion in China by connecting online to offline service and we are planning to launch soon our first product on kickstarter.
@@ -86,7 +88,7 @@ block content
                   img.hover(src="/images/works/" + val + ".png")
           .content-mobile.visible-xs-block
             ol.works
-              //li.work
+              //-li.work
                 .desc-container.next
                   .icon-container
                     img(src="/images/icn_next.png")
@@ -151,11 +153,11 @@ block content
                   .video-area.dnd
                     iframe(src="//player.vimeo.com/video/72255740", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
 
-        //div.work-images.hidden-xs
+        //-div.work-images.hidden-xs
           img.works(src="/images/easi6_work.jpg")
 
 
-      section#about
+      //-section#about
         div.headline
           h3.font-replica-reg About Us
           p.font-roboto.lead-custom Make people's life easy.
@@ -172,12 +174,12 @@ block content
             img.page-3(src="/images/easi6_image3.png")
             .page-title
               img.title-3(src="/images/easi6_type3.png")
-          //div#page-4.intro-page
+          //-div#page-4.intro-page
             img.page-4(src="/images/bg-page-4.jpg")
             .page-title
               img.title-4(src="/images/sentence4.png")
     
-      //section#members
+      //- section#members
         div.headline
           h3.font-replica-reg Team
           //p.font-roboto.lead-custom Interested in working with us? Shoot an email to work@easi6.com!
@@ -329,33 +331,37 @@ block content
           div#contact
             div.contact-container
               ul.contacts
-                li.item.map.hidden-xs(style="margin-left: 23%;")
+                //-li.item.map.hidden-xs(style="margin-left: 23%;")
                   a(href="#")
                     img(src="/images/btn_map.png")
                     img.hover(src="/images/btn_hover_map.png")
-                li.item.map-mobile.visible-xs-block
+                //-li.item.map-mobile.visible-xs-block
                   a(href="https://www.google.co.kr/maps/place/Trade+Capital/@22.2805019,114.1553483,17z", target="_blank")
                     img(src="/images/btn_map.png")
-                li.item.mail
-                  a(href="mailto:info@easi6.com", target="_top")
-                    img(src="/images/btn_email.png")
-                    img.hover(src="/images/btn_hover_email.png")
-                //li.item.facebook
+                //-li.item.facebook
                   a(href="https://facebook.com/easi6", target="_blank")
                     img(src="/images/btn_facebook.png")
                     img.hover(src="/images/btn_hover_facebook.png")
-                //li.item.twitter
+                //-li.item.twitter
                   a(href="https://twitter.com/easi6", target="_blank")
                     img(src="/images/btn_twitter.png")
                     img.hover(src="/images/btn_hover_twitter.png")
                 li.item.blog
-                  a(href="http://blog.easi6.com", target="_blank")
+                  a(href="http://blog.naver.com/easi6", target="_blank")
                     img(src="/images/btn_blog.png")
                     img.hover(src="/images/btn_hover_blog.png")
+                li.item.facebook
+                  a(href="https://facebook.com/easi6", target="_blank")
+                    img(src="/images/btn_facebook.png")
+                    img.hover(src="/images/btn_hover_facebook.png")
             div.info
-              //img.logo(src="/images/easi6_logo_green.png")
-              //p.font-replica-reg To make people easy.
-              p.desc.font-roboto 2016 easi6 Inc. All Rights Reserved
+              //-img.logo(src="/images/easi6_logo_green.png")
+              //-p.font-replica-reg To make people easy.
+              p.desc.font-roboto(style="line-height: 180%")
+                | 2017 easi6 Inc. All Rights Reserved
+                br
+                a(mailto="support@easi6.com") support@easi6.com
+  //-
     section#modal
       div#easiway-modal.modal.fade
         .modal-dialog
