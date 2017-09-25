@@ -308,12 +308,13 @@ h6 {
 #news .easiway-container .logobox {
   display: inline-block;
   margin: 0 5px;
-  width: 136px;
-  height: 42px;
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 4px;
   transition: all 0.3s ease;
   vertical-align: top;
+}
+@media (max-width: 640px) {
+  #news .easiway-container .logobox {
+    width: 100%;
+  }
 }
 #news .easiway-container .logobox:hover {
   background-color: rgba(255,255,255,0.2);
@@ -322,6 +323,10 @@ h6 {
   display: block;
   width: 100%;
   height: 100%;
+  width: 136px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
 }
 #news .easiway-container .logobox img {
   width: 100%;
@@ -332,6 +337,7 @@ h6 {
   color: #fff;
   font-size: 15px;
   vertical-align: middle;
+  padding-top: 2px;
 }
 #news {
   width: 100%;
@@ -399,6 +405,11 @@ h6 {
   margin-bottom: 10px;
   font-size: 88px;
 }
+@media (max-width: 640px) {
+  #news #banner .banner-text h1 {
+    margin-top: 30px;
+  }
+}
 #news #banner .banner-text p {
   color: #fff;
   font-size: 16px;
@@ -414,9 +425,9 @@ h6 {
   color: #00c496;
   text-decoration: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 640px) {
   #news #banner .banner-text a {
-    color: #00c496;
+    margin: 5px auto;
   }
 }
 #intro .intro-page {
@@ -757,6 +768,11 @@ h6 {
   color: #808080;
   text-align: center;
 }
+@media (max-width: 640px) {
+  .footer .info .desc {
+    margin-bottom: 0;
+  }
+}
 .footer #contact {
   width: 100%;
 }
@@ -764,6 +780,11 @@ h6 {
   height: 101px;
   width: 100%;
   float: left;
+}
+@media (max-width: 640px) {
+  .footer #contact div.contact-container {
+    height: 80px;
+  }
 }
 .footer #contact div.contact-container ul.contacts {
   margin: auto;
