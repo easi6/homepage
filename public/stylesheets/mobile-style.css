@@ -6,12 +6,10 @@ body {
   margin: 0;
 }
 ::selection {
-  background: #ffbe71;
-/* Safari */
+  background: #ffbe71; /* Safari */
 }
 ::-moz-selection {
-  background: #ffbe71;
-/* Firefox */
+  background: #ffbe71; /* Firefox */
 }
 #nav.background_green {
   background-color: #80af82;
